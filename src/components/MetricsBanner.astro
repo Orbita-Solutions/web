@@ -1,0 +1,69 @@
+---
+import MetricCard from "@components/MetricCard.astro";
+---
+
+<section class="metrics-container">
+  <!-- Mobile only -->
+  <div class="metrics-partial-container">
+    <MetricCard title="45%" description="Increase user retention" />
+    <MetricCard title="15%" description="Increase in product sales" />
+  </div>
+
+  <MetricCard
+    class="desktop-only"
+    title="45%"
+    description="Increase user retention"
+  />
+  <MetricCard
+    class="desktop-only"
+    title="15%"
+    description="Increase in product sales"
+  />
+
+  <MetricCard
+    title="999"
+    description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
+  />
+
+  <MetricCard
+    title="999"
+    description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
+  />
+</section>
+
+<style>
+  .metrics-container {
+    display: flex;
+    flex-flow: column;
+    padding: 56px 16px;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .metrics-partial-container {
+    display: flex;
+    flex-flow: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  @media (width >= 1280px) {
+    .desktop-only {
+      display: initial;
+    }
+    
+    .metrics-container {
+      flex-flow: row;
+      padding: 56px 64px;
+    }
+
+    .metrics-partial-container {
+      display: none;
+    }
+  }
+</style>

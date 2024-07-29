@@ -7,17 +7,19 @@ import ImageSVG from "./shared/ImageSVG.astro";
     <ImageSVG name="Logo" />
   </div>
 
-  <p class="description">Tu visión, nuestra misión: Despega con Orbita.</p>
+  <p class:list={["description", "body2"]}>
+    Tu visión, nuestra misión: Despega con Orbita.
+  </p>
 
   <div class="scroll-container">
     <ImageSVG name="Scroll" />
-    <p>Desliza hacia abajo.</p>
+    <p class="body2">Desliza hacia abajo.</p>
   </div>
 </section>
 
 <style>
   .hero-container {
-    height: calc(100svh - 56px);
+    min-height: calc(100svh - 56px);
     z-index: 0;
     display: flex;
     position: relative;
