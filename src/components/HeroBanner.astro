@@ -1,0 +1,81 @@
+---
+import ImageSVG from "./shared/ImageSVG.astro";
+---
+
+<section class="hero-container">
+  <div class="image-container">
+    <ImageSVG name="Logo" />
+  </div>
+
+  <p class="description">Tu visión, nuestra misión: Despega con Orbita.</p>
+
+  <div class="scroll-container">
+    <ImageSVG name="Scroll" />
+    <p>Desliza hacia abajo.</p>
+  </div>
+</section>
+
+<style>
+  .hero-container {
+    height: calc(100svh - 56px);
+    z-index: 0;
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .image-container {
+    margin-top: 35svh;
+  }
+
+  .description {
+    max-width: 50svw;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .scroll-container {
+    margin-top: 150px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  /* Specific rules for really small screens */
+  @media screen and (width < 568px) and (height <= 667px) {
+    .scroll-container {
+      margin-top: 60px;
+    }
+  }
+
+  @media (width >= 768px) {
+    .image-container {
+      margin-top: 40svh;
+    }
+
+    .scroll-container {
+      margin-top: 200px;
+    }
+  }
+
+  @media (width >= 1024px) {
+    .image-container {
+      margin-top: 35svh;
+    }
+
+    .scroll-container {
+      margin-top: 200px;
+    }
+  }
+
+  @media (width >= 1280px) {
+    .image-container {
+      margin-top: 40svh;
+    }
+
+    .scroll-container {
+      margin-top: 250px;
+    }
+  }
+</style>

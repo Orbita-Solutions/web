@@ -1,0 +1,89 @@
+---
+import AppBackground from "@components/AppBackground.astro";
+import NavigationMenu from "@components/NavigationMenu.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <AppBackground>
+      <NavigationMenu />
+
+      <section>
+        <slot />
+      </section>
+    </AppBackground>
+  </body>
+</html>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  * {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  :root {
+    --dark-matter: #1e1e33;
+    --energy-blue: #05d3bf;
+    --energy-orange: #ff861b;
+    --energy-pink: #cc3266;
+    --header-background: #0e0e20;
+    --light-grey: #e2edec;
+    --primary-text: #fff;
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    background: var(--dark-matter);
+    color: var(--primary-text);
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>

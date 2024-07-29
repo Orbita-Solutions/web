@@ -1,0 +1,186 @@
+---
+import ImageSVG from "@components/shared/ImageSVG.astro";
+---
+
+<section class="app-container">
+  <!-- Mobile -->
+  <ImageSVG class="app-centered-image ellipse" name="Ellipse" />
+  <ImageSVG class="app-centered-image vector1" name="Vector1" />
+  <ImageSVG class="app-centered-image vector2" name="Vector2" />
+  <ImageSVG class="app-centered-image vector3" name="Vector3" />
+
+  <!-- Tablet -->
+  <ImageSVG class="app-centered-image ellipse-tablet" name="Ellipse-tablet" />
+  <ImageSVG class="app-centered-image vector1-tablet" name="Vector1-tablet" />
+  <ImageSVG class="app-centered-image vector2-tablet" name="Vector2-tablet" />
+  <ImageSVG class="app-centered-image vector3-tablet" name="Vector3-tablet" />
+
+  <!-- Desktop -->
+  <ImageSVG class="app-centered-image ellipse-desktop" name="Ellipse-desktop" />
+  <ImageSVG class="app-centered-image vector1-desktop" name="Vector1-desktop" />
+  <ImageSVG class="app-centered-image vector2-desktop" name="Vector2-desktop" />
+  <ImageSVG class="app-centered-image vector3-desktop" name="Vector3-desktop" />
+
+  <slot />
+</section>
+
+<style>
+  .app-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .app-centered-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .ellipse {
+    transform: translate(-50%, -100svh);
+  }
+
+  .vector1 {
+    transform: translate(-50%, -30svh);
+  }
+
+  .vector2 {
+    transform: translate(-50%, 130svh);
+  }
+
+  .vector3 {
+    transform: translate(-50%, 200svh);
+  }
+
+  .ellipse-tablet,
+  .vector1-tablet,
+  .vector2-tablet,
+  .vector3-tablet,
+  .ellipse-desktop,
+  .vector1-desktop,
+  .vector2-desktop,
+  .vector3-desktop {
+    display: none;
+  }
+
+  @media (width >= 568px) {
+    .ellipse,
+    .vector1,
+    .vector2,
+    .vector3 {
+      display: none;
+    }
+
+    .ellipse-tablet,
+    .vector1-tablet,
+    .vector2-tablet,
+    .vector3-tablet {
+      display: block;
+    }
+
+    .ellipse-tablet {
+      transform: translate(-50%, -160svh);
+    }
+
+    .vector1-tablet {
+      transform: translate(-50%, -30svh);
+    }
+
+    .vector2-tablet {
+      transform: translate(-50%, 130svh);
+    }
+
+    .vector3-tablet {
+      transform: translate(-50%, 200svh);
+    }
+  }
+
+  @media (width >= 1280px) {
+    .ellipse-tablet,
+    .vector1-tablet,
+    .vector2-tablet,
+    .vector3-tablet {
+      display: none;
+    }
+
+    .ellipse-desktop,
+    .vector3-desktop {
+      display: block;
+    }
+
+    .vector1-desktop,
+    .vector2-desktop {
+      display: block;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ellipse-desktop {
+      transform: translate(-50%, -115svh);
+    }
+
+    .vector1-desktop {
+      transform: translate(0, 20svh);
+    }
+
+    .vector2-desktop {
+      transform: translate(0, 220svh);
+    }
+
+    .vector3-desktop {
+      transform: translate(-50%, 200svh);
+    }
+  }
+
+  @media screen and (width >= 568px) and (height <= 430px) {
+    .vector2-tablet {
+      transform: translate(-50%, 400svh);
+    }
+
+    .vector3-tablet {
+      transform: translate(-50%, 500svh);
+    }
+  }
+
+  @media screen and (width < 568px) and (height <= 740px) {
+    .ellipse {
+      transform: translate(-50%, -120svh);
+    }
+  }
+
+  @media screen and (width >= 768px) and (height > 1024px) {
+    .ellipse-tablet {
+      transform: translate(-50%, -145svh);
+    }
+  }
+
+  @media screen and (width >= 768px) and (height > 1180px) {
+    .ellipse-tablet {
+      transform: translate(-50%, -128svh);
+    }
+  }
+
+  @media screen and (width >= 1024px) and (height <= 820px) {
+    .ellipse-tablet {
+      transform: translate(-50%, -200svh);
+    }
+
+    .vector2-tablet {
+      transform: translate(-50%, 200svh);
+    }
+
+    .vector3-tablet {
+      transform: translate(-50%, 300svh);
+    }
+  }
+
+  @media screen and (width >= 1280px) and (height <= 1000px) {
+    .ellipse-desktop {
+      transform: translate(-50%, -135svh);
+    }
+  }
+</style>
