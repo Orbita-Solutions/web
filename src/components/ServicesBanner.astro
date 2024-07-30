@@ -7,7 +7,7 @@ import ServicesCard from "@components/ServicesCard.astro";
   <div class="our-services">
     <div class="title-wrapper">
       <h3>Our Services</h3>
-      <p>
+      <p class="title-description">
         Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis
         donec euismod.
       </p>
@@ -98,6 +98,12 @@ import ServicesCard from "@components/ServicesCard.astro";
 
   @media (width >= 1280px) {
     .title-wrapper {
+      width: 50%;
+      max-width: 50%;
+      align-items: center;
+    }
+
+    .title-description {
       max-width: 482px;
     }
   }

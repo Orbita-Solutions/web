@@ -127,11 +127,30 @@ import ImageSVG from "@components/shared/ImageSVG.astro";
     }
 
     .vector2-desktop {
-      transform: translate(0, 220svh);
+      transform: translate(0, 165svh);
     }
 
     .vector3-desktop {
-      transform: translate(-50%, 200svh);
+      transform: translate(-50%, 190svh);
+    }
+  }
+
+  /* MOBILE SPECIFIC */
+  @media screen and (width >= 1920px) {
+    .ellipse-desktop {
+      transform: translate(-50%, -115svh);
+    }
+
+    .vector1-desktop {
+      transform: translate(0, 20svh);
+    }
+
+    .vector2-desktop {
+      transform: translate(0, 140svh);
+    }
+
+    .vector3-desktop {
+      transform: translate(-50%, 150svh);
     }
   }
 
@@ -150,19 +169,45 @@ import ImageSVG from "@components/shared/ImageSVG.astro";
       transform: translate(-50%, -120svh);
     }
   }
+  /* END OF MOBILE SPECIFIC */
 
-  @media screen and (width >= 768px) and (height > 1024px) {
+  /* TABLET */
+  @media screen and (width >= 768px) and (height >= 1024px) {
     .ellipse-tablet {
-      transform: translate(-50%, -145svh);
+      transform: translate(-50%, -160svh);
+    }
+
+    .vector3-tablet {
+      transform: translate(-50%, 230svh);
     }
   }
 
-  @media screen and (width >= 768px) and (height > 1180px) {
+  @media screen and (width >= 768px) and (height >= 1180px) {
     .ellipse-tablet {
-      transform: translate(-50%, -128svh);
+      transform: translate(-50%, -140svh);
+    }
+
+    .vector3-tablet {
+      transform: translate(-50%, 205svh);
     }
   }
 
+  @media screen and (width >= 1024px) and (height >= 1366px) {
+    .ellipse-tablet {
+      transform: translate(-50%, -130svh);
+    }
+
+    .vector2-tablet {
+      transform: translate(-50%, 100svh);
+    }
+
+    .vector3-tablet {
+      transform: translate(-50%, 180svh);
+    }
+  }
+  /* END TABLET */
+
+  /* TABLET LANDSCAPE */
   @media screen and (width >= 1024px) and (height <= 820px) {
     .ellipse-tablet {
       transform: translate(-50%, -200svh);
@@ -182,4 +227,5 @@ import ImageSVG from "@components/shared/ImageSVG.astro";
       transform: translate(-50%, -135svh);
     }
   }
+  /* END TABLET LANDSCAPE*/
 </style>
