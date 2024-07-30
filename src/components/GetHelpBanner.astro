@@ -1,0 +1,55 @@
+---
+import ContactInfo from "./ContactInfo.astro";
+import Button from "./shared/Button.astro";
+---
+
+<section class="get-help bring-up">
+  <h2>Tell us how we can help you</h2>
+
+  <ContactInfo position="Founder" email="contact@gmail.com" name="Name" />
+  <ContactInfo position="Sales" email="contact@gmail.com" name="Name" />
+
+  <Button class="contact-button"> Let us Contact You </Button>
+</section>
+
+<style>
+  .get-help {
+    background: var(--paper);
+    padding: 56px 16px;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+  }
+
+  .contact {
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .position,
+  .email {
+    margin-bottom: 16px;
+  }
+
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .contact-button {
+    width: 205px;
+    align-self: center;
+  }
+
+  @media (width >= 767px) {
+    .get-help {
+      padding: 56px 32px;
+    }
+  }
+
+  @media (width >= 1280px) {
+    h2 {
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+export interface Props {
+  position: string;
+  name: string;
+  email: string;
+}
+
+const { position, name, email } = Astro.props;
+---
+
+<div class="contact">
+  <p class="position body2">{position}</p>
+
+  <div class="info-wrapper">
+    <p class="name">{name}</p>
+    <p class="email body2">{email}</p>
+  </div>
+</div>
+
+<style>
+  .contact {
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--divider);
+    display: flex;
+    flex-flow: column;
+  }
+
+  .position,
+  .email {
+    margin-bottom: 16px;
+  }
+
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .info-wrapper {
+    display: flex;
+    flex-flow: column;
+  }
+
+  @media (width >= 767px) { 
+    .contact {
+        flex-flow:row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .position {
+        flex: 40%;
+    }
+
+    .info-wrapper {
+        flex: 60%;
+        justify-content: flex-start;
+    }
+  }
+</style>
