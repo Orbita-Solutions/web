@@ -1,13 +1,20 @@
 ---
 import Icon from "@components/shared/Icon.astro";
 import ImageSVG from "./shared/ImageSVG.astro";
+import Button from "./shared/Button.astro";
 ---
 
-<nav class="nav-wrapper">
+<nav class="nav-wrapper bring-up">
   <ImageSVG class="logo-wrapper" name="menu-logo" />
 
+  <div class="desktop-menu">
+    <ImageSVG class="logo-wrapper-desktop" name="menu-logo" />
+    <a href="">Our work</a>
+    <Button class="contact-btn">Contact Us</Button>
+  </div>
+
   <button class="hamburger-menu">
-    <Icon name="hamburger-menu" />
+    <Icon class="hamburger-icon" name="hamburger-menu" />
   </button>
 </nav>
 
@@ -21,9 +28,13 @@ import ImageSVG from "./shared/ImageSVG.astro";
   }
 
   .logo-wrapper {
-    width: 400px;
+    width: 162px;
     display: flex;
     align-items: center;
+  }
+
+  .logo-wrapper-desktop {
+    display: none;
   }
 
   .hamburger-menu {
@@ -32,5 +43,52 @@ import ImageSVG from "./shared/ImageSVG.astro";
     width: 24px;
     height: 100%;
     cursor: pointer;
+  }
+
+  .hamburger-icon {
+    width: 18px;
+    height: 12px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  @media (width >= 1280px) {
+    .hamburger-menu,
+    .logo-wrapper {
+      display: none;
+    }
+
+    .desktop-menu {
+      width: 100%;
+      display: initial;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .desktop-menu > a {
+      font-size: 13px;
+      line-height: 22px;
+      text-decoration: none;
+      color: var(--energy-blue);
+    }
+
+    .logo-wrapper-desktop {
+      display: initial;
+      width: 162px;
+    }
+
+    .contact-btn {
+      width: 103px;
+      height: 30px;
+      background: var(--energy-blue);
+      color: var(--button-energy-blue);
+      font-size: 13px;
+      line-height: 22px;
+      padding: 4px 13px;
+    }
   }
 </style>
