@@ -12,6 +12,7 @@ const { title, description, class: className, ...rest } = Astro.props;
 
 <Card class:list={["metric-card", className]} {...rest}>
   <div class="data-wrapper">
+    <slot />
     <h3>{title}</h3>
     <p>{description}</p>
   </div>

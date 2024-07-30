@@ -1,0 +1,33 @@
+---
+import ImageSVG from "@components/shared/ImageSVG.astro";
+---
+
+<section class="customers">
+  <ImageSVG class="icon" name="Marca" />
+  <ImageSVG class="icon" name="Marca" />
+  <ImageSVG class="icon" name="Iris" />
+  <ImageSVG class="icon" name="Marca" />
+  <ImageSVG class="icon" name="Marca" />
+</section>
+
+<style>
+  .customers {
+    z-index: 1;
+    position: relative;
+    background: var(--paper);
+    padding: 32px 24px;
+    display: flex;
+    flex-flow: row;
+    overflow-x: auto;
+    align-items: center;
+    gap: 24px;
+    scrollbar-width: none;
+  }
+
+  .icon {
+    margin-left: auto;
+  }
+  .icon:last-child {
+    margin-right: auto;
+  }
+</style>

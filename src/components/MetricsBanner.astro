@@ -1,5 +1,6 @@
 ---
 import MetricCard from "@components/MetricCard.astro";
+import Icon from "./shared/Icon.astro";
 ---
 
 <section class="metrics-container">
@@ -13,22 +14,38 @@ import MetricCard from "@components/MetricCard.astro";
     class="desktop-only"
     title="45%"
     description="Increase user retention"
-  />
+  >
+    <div class="metric-icon">
+      <Icon name="MetricIcon1" />
+    </div>
+  </MetricCard>
   <MetricCard
     class="desktop-only"
     title="15%"
     description="Increase in product sales"
-  />
+  >
+    <div class="metric-icon">
+      <Icon name="MetricIcon2" />
+    </div>
+  </MetricCard>
 
   <MetricCard
     title="999"
     description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
-  />
+  >
+    <div class="metric-icon">
+      <Icon name="MetricIcon3" />
+    </div>
+  </MetricCard>
 
   <MetricCard
     title="999"
     description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
-  />
+  >
+    <div class="metric-icon">
+      <Icon name="MetricIcon4" />
+    </div>
+  </MetricCard>
 </section>
 
 <style>
@@ -48,6 +65,10 @@ import MetricCard from "@components/MetricCard.astro";
     justify-content: space-between;
   }
 
+  .metric-icon {
+    display: none;
+  }
+
   .desktop-only {
     display: none;
   }
@@ -56,7 +77,7 @@ import MetricCard from "@components/MetricCard.astro";
     .desktop-only {
       display: initial;
     }
-    
+
     .metrics-container {
       flex-flow: row;
       padding: 56px 64px;
@@ -64,6 +85,11 @@ import MetricCard from "@components/MetricCard.astro";
 
     .metrics-partial-container {
       display: none;
+    }
+
+    .metric-icon {
+      display: initial;
+      height: 80px;
     }
   }
 </style>
