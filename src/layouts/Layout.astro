@@ -1,5 +1,6 @@
 ---
 import AppBackground from "@components/AppBackground.astro";
+import Footer from "@components/Footer.astro";
 import NavigationMenu from "@components/NavigationMenu.astro";
 
 interface Props {
@@ -26,6 +27,8 @@ const { title } = Astro.props;
       <section>
         <slot />
       </section>
+
+      <Footer />
     </AppBackground>
   </body>
 </html>
@@ -148,5 +151,13 @@ const { title } = Astro.props;
   .bring-up {
     z-index: 0;
     position: relative;
+  }
+
+  a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: normal;
+    color: var(--primary-text);
   }
 </style>

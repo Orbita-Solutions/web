@@ -1,0 +1,81 @@
+---
+import ImageSVG from "./shared/ImageSVG.astro";
+---
+
+<footer>
+  <section class="links">
+    <div class="all-links">
+      <div class="links-section">
+        <a href="">Services</a>
+        <a href="">Projects</a>
+        <a href="">Work with Us</a>
+      </div>
+
+      <div class="links-section">
+        <a href="">Instagram</a>
+        <a href="">LinkedIn</a>
+      </div>
+    </div>
+
+    <div>
+      <p class="chat">Let's chat</p>
+      <a href="email:contact@gmail.com">contact@gmail.com</a>
+    </div>
+  </section>
+
+  <ImageSVG class="logo" name="Logo" />
+</footer>
+
+<style>
+  footer {
+    padding: 48px 16px;
+    display: flex;
+  }
+
+  .links {
+    width: 343px;
+    max-width: 343px;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+  }
+
+  .all-links {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .links-section {
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+  }
+
+  .chat {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  @media (width >= 768px) {
+    footer {
+      padding: 48px 64px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: initial;
+    }
+  }
+
+  @media (width >= 1280px) {
+    footer {
+      justify-content: space-around;
+    } 
+  }
+</style>
