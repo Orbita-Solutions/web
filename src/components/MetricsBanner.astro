@@ -15,8 +15,8 @@ import Icon from "./shared/Icon.astro";
     title="45%"
     description="Increase user retention"
   >
-    <div class="metric-icon">
-      <Icon name="MetricIcon1" />
+    <div class="metric-icon-wrapper">
+      <Icon class="metric-icon" name="MetricIcon1" />
     </div>
   </MetricCard>
   <MetricCard
@@ -24,8 +24,8 @@ import Icon from "./shared/Icon.astro";
     title="15%"
     description="Increase in product sales"
   >
-    <div class="metric-icon">
-      <Icon name="MetricIcon2" />
+    <div class="metric-icon-wrapper">
+      <Icon class="metric-icon" name="MetricIcon2" />
     </div>
   </MetricCard>
 
@@ -33,8 +33,8 @@ import Icon from "./shared/Icon.astro";
     title="999"
     description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
   >
-    <div class="metric-icon">
-      <Icon name="MetricIcon3" />
+    <div class="metric-icon-wrapper">
+      <Icon class="metric-icon" name="MetricIcon3" />
     </div>
   </MetricCard>
 
@@ -42,8 +42,8 @@ import Icon from "./shared/Icon.astro";
     title="999"
     description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
   >
-    <div class="metric-icon">
-      <Icon name="MetricIcon4" />
+    <div class="metric-icon-wrapper">
+      <Icon class="metric-icon" name="MetricIcon4" />
     </div>
   </MetricCard>
 </section>
@@ -65,7 +65,7 @@ import Icon from "./shared/Icon.astro";
     justify-content: space-between;
   }
 
-  .metric-icon {
+  .metric-icon-wrapper {
     display: none;
   }
 
@@ -87,9 +87,14 @@ import Icon from "./shared/Icon.astro";
       display: none;
     }
 
-    .metric-icon {
+    .metric-icon-wrapper {
       display: initial;
       height: 80px;
+    }
+
+    .metric-icon {
+      width: 38px;
+      height: 38px;
     }
   }
 </style>

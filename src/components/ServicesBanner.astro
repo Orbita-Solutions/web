@@ -1,0 +1,105 @@
+---
+import Button from "@components/shared/Button.astro";
+import ServicesCard from "@components/ServicesCard.astro";
+---
+
+<section class:list={["bring-up", "services-wrapper"]}>
+  <div class="our-services">
+    <div class="title-wrapper">
+      <h3>Our Services</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis
+        donec euismod.
+      </p>
+
+      <Button class="services-button"> View all services </Button>
+    </div>
+
+    <div class="cards-wrapper">
+      <ServicesCard serviceName="Service" iconName="MetricIcon3" />
+      <ServicesCard serviceName="Service" iconName="MetricIcon4" />
+      <ServicesCard serviceName="Service" iconName="MetricIcon2" />
+    </div>
+  </div>
+
+  <Button class="services-button-mobile"> View all services </Button>
+</section>
+
+<style>
+  .services-wrapper {
+    margin: 56px 0;
+    padding: 0 16px;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+
+  .our-services {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .title-wrapper {
+    max-width: 340px;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .our-services > h3 {
+    max-width: 80%;
+  }
+
+  .services-button,
+  .services-button-mobile {
+    width: 187px;
+    align-self: center;
+  }
+
+  .services-button {
+    display: none;
+  }
+
+  @media (width >= 767px) {
+    .services-wrapper {
+      padding: 0 32px;
+    }
+
+    .our-services {
+      flex-flow: row;
+      flex: 1;
+      gap: 24px;
+    }
+
+    .title-wrapper {
+      justify-content: center;
+      text-align: center;
+      gap: 24px;
+    }
+
+    .cards-wrapper {
+      flex: 1;
+    }
+
+    .services-button-mobile {
+      display: none;
+    }
+
+    .services-button {
+      display: initial;
+    }
+  }
+
+  @media (width >= 1280px) {
+    .title-wrapper {
+      max-width: 482px;
+    }
+  }
+</style>

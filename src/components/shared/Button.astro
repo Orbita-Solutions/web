@@ -1,0 +1,26 @@
+---
+export interface Props {
+  class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<button class:list={["btn", className]} {...rest}>
+  <p>
+    <slot />
+  </p>
+</button>
+
+<style>
+  .btn {
+    border-radius: 10px;
+    width: 100%;
+    height: 42px;
+    padding: 8px 26px;
+    background: var(--energy-orange);
+    color: var(--primary-text);
+    font-size: 15px;
+    line-height: 26px;
+  }
+</style>
