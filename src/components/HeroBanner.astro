@@ -2,7 +2,7 @@
 import ImageSVG from "./shared/ImageSVG.astro";
 ---
 
-<section class="hero-container">
+<section class:list={["hero-container", "bring-up"]}>
   <div class="image-container">
     <ImageSVG name="Logo" />
   </div>
@@ -20,9 +20,7 @@ import ImageSVG from "./shared/ImageSVG.astro";
 <style>
   .hero-container {
     min-height: calc(100svh - 56px);
-    z-index: 0;
     display: flex;
-    position: relative;
     flex-flow: column;
     align-items: center;
   }

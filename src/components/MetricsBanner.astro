@@ -3,7 +3,7 @@ import MetricCard from "@components/MetricCard.astro";
 import Icon from "./shared/Icon.astro";
 ---
 
-<section class="metrics-container">
+<section class:list={["metrics-container", "bring-up"]}>
   <!-- Mobile only -->
   <div class="metrics-partial-container">
     <MetricCard title="45%" description="Increase user retention" />
