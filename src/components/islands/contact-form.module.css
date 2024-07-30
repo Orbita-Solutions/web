@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.form > div {
+  display: flex;
+  flex-flow: column;
+  gap: 4px;
+}
+
+.form > div > label {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.form > div > input {
+  height: 32px;
+  background: transparent;
+  border: 1px solid #ffffff80;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.btn {
+  border-radius: 10px;
+  width: 113px;
+  height: 38px;
+  padding: 8px;
+  background: var(--energy-orange);
+  color: var(--primary-text);
+  font-size: 15px;
+  line-height: 26px;
+  align-self: center;
+}

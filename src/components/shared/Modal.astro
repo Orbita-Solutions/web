@@ -54,10 +54,9 @@ const { id, buttonText, class: className, ...rest } = Astro.props;
   }
 
   .close-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 8px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 24px 0 16px 0;
   }
 
   .btn {
@@ -69,5 +68,11 @@ const { id, buttonText, class: className, ...rest } = Astro.props;
     color: var(--primary-text);
     font-size: 15px;
     line-height: 26px;
+  }
+
+  @media (width <= 768px) {
+    dialog {
+      width: 100svh;
+    }
   }
 </style>
