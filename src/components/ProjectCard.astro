@@ -1,0 +1,79 @@
+---
+import Card from "./shared/Card.astro";
+
+export interface Props {
+  projectName: string;
+  projectDescription: string;
+  imgUrl: string;
+  imgAlt: string;
+  attributes: string[];
+}
+
+const { projectName, projectDescription, imgUrl, imgAlt, attributes } =
+  Astro.props;
+---
+
+<Card class="card">
+  <div class="project-card">
+    <h4>{projectName}</h4>
+    <div class="project-attributes">
+      {
+        attributes.map((att, index) => (
+          <>
+            <p class="body2">{att}</p>
+
+            {index + 2 <= attributes.length ? <span class="separator" /> : null}
+          </>
+        ))
+      }
+    </div>
+    <p class="body1">
+      {projectDescription}
+    </p>
+
+    <img src={imgUrl} alt={imgAlt} />
+  </div>
+</Card>
+
+<style>
+  .card {
+    background: var(--paper);
+    min-width: 300px;
+    width: 300px;
+  }
+
+  .project-attributes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .separator {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--energy-blue);
+  }
+
+  .project-card {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+  }
+
+  @media (width >= 767px) {
+    .card {
+      background: var(--paper);
+      min-width: 536px;
+      width: 536px;
+    }
+  }
+</style>

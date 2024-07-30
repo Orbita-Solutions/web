@@ -2,7 +2,7 @@
 import ImageSVG from "@components/shared/ImageSVG.astro";
 ---
 
-<section class:list={['customers', 'bring-up']}>
+<section class:list={["customers", "bring-up"]}>
   <ImageSVG class="icon" name="Marca" />
   <ImageSVG class="icon" name="Marca" />
   <ImageSVG class="icon" name="Iris" />
@@ -22,6 +22,10 @@ import ImageSVG from "@components/shared/ImageSVG.astro";
     align-items: center;
     gap: 24px;
     scrollbar-width: none;
+  }
+
+  .customers::-webkit-scrollbar {
+    width: 0px;
   }
 
   .icon {

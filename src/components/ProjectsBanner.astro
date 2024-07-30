@@ -1,0 +1,105 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import Button from "./shared/Button.astro";
+---
+
+<section class="bring-up projects">
+  <div class="title-wrapper">
+    <h3>Completed projects</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec
+      euismod.
+    </p>
+  </div>
+
+  <section class="project-cards-wrapper">
+    <ProjectCard
+      attributes={["Industry", "Time", "Type"]}
+      imgAlt="Alt image"
+      imgUrl="/public/images/project.webp"
+      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
+      projectName="Project 1"
+    />
+    <ProjectCard
+      attributes={["Industry", "Time", "Type"]}
+      imgAlt="Alt image"
+      imgUrl="/public/images/project.webp"
+      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
+      projectName="Project 2"
+    />
+    <ProjectCard
+      attributes={["Industry", "Time", "Type"]}
+      imgAlt="Alt image"
+      imgUrl="/public/images/project.webp"
+      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
+      projectName="Project 3"
+    />
+    <ProjectCard
+      attributes={["Industry", "Time", "Type"]}
+      imgAlt="Alt image"
+      imgUrl="/public/images/project.webp"
+      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
+      projectName="Project 4"
+    />
+    <ProjectCard
+      attributes={["Industry", "Time", "Type"]}
+      imgAlt="Alt image"
+      imgUrl="/public/images/project.webp"
+      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
+      projectName="Project 5"
+    />
+  </section>
+
+  <Button class="projects-button"> View all projects </Button>
+</section>
+
+<style>
+  .projects {
+    padding: 56px 0;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+  }
+
+  .title-wrapper {
+    max-width: 375px;
+    padding: 0 16px;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+    margin: 0 0 24px 0;
+  }
+
+  .project-cards-wrapper {
+    overflow-x: auto;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 24px;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    padding: 0 16px;
+  }
+
+  .project-cards-wrapper::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .projects-button {
+    width: 186px;
+    align-self: center;
+  }
+
+  @media (width >= 767px) {
+    .title-wrapper {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (width >= 1280px) {
+    .title-wrapper {
+      padding: 0 32px;
+    }
+  }
+</style>
