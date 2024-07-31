@@ -1,7 +1,7 @@
 ---
-import ContactInfo from "./ContactInfo.astro";
-import { ContactForm } from "./islands/contact-form";
-import Modal from "./shared/Modal.astro";
+import { ContactForm } from "@components/islands/ContactForm";
+import ContactInfo from "@components/ContactInfo.astro";
+import Modal from "@components/shared/Modal.astro";
 ---
 
 <section class="get-help bring-up">
@@ -9,8 +9,6 @@ import Modal from "./shared/Modal.astro";
 
   <ContactInfo position="Founder" email="contact@gmail.com" name="Name" />
   <ContactInfo position="Sales" email="contact@gmail.com" name="Name" />
-
-  <!-- <Button class="contact-button"> Let us Contact You </Button> -->
 
   <Modal
     class="contact-button"

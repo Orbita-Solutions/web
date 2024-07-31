@@ -1,5 +1,6 @@
-import styles from "./contact-form.module.css";
+import styles from "./ContactForm.module.css";
 import useForm from "@hooks/useForm";
+
 interface ContactFormState {
   goal: string;
   email: string;
@@ -8,15 +9,15 @@ interface ContactFormState {
   country: string;
 }
 
-export const ContactForm: React.FC = () => {
-  const initialState: ContactFormState = {
-    goal: "",
-    email: "",
-    name: "",
-    company: "",
-    country: "",
-  };
+const initialState: ContactFormState = {
+  goal: "",
+  email: "",
+  name: "",
+  company: "",
+  country: "",
+};
 
+export const ContactForm: React.FC = () => {
   const { formState, isSubmitting, error, handleChange, handleSubmit } =
     useForm<ContactFormState>(initialState);
 
