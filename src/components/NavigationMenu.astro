@@ -1,21 +1,19 @@
 ---
-import Icon from "@components/shared/Icon.astro";
-import ImageSVG from "./shared/ImageSVG.astro";
+import { MobileMenu } from "@components/islands/mobile-menu/MobileMenu";
 import Button from "./shared/Button.astro";
+import ImageSVG from "./shared/ImageSVG.astro";
 ---
 
 <nav class="nav-wrapper bring-up">
-  <ImageSVG class="logo-wrapper" name="menu-logo" />
-
   <div class="desktop-menu">
     <ImageSVG class="logo-wrapper-desktop" name="menu-logo" />
     <a href="">Our work</a>
     <Button class="contact-btn">Contact Us</Button>
   </div>
 
-  <button class="hamburger-menu">
-    <Icon class="hamburger-icon" name="hamburger-menu" />
-  </button>
+  <ImageSVG class="logo-wrapper" name="menu-logo" />
+
+  <MobileMenu client:only />
 </nav>
 
 <style>
@@ -37,14 +35,6 @@ import Button from "./shared/Button.astro";
     display: none;
   }
 
-  .hamburger-menu {
-    display: flex;
-    align-items: center;
-    width: 24px;
-    height: 100%;
-    cursor: pointer;
-  }
-
   .hamburger-icon {
     width: 18px;
     height: 12px;
@@ -55,7 +45,6 @@ import Button from "./shared/Button.astro";
   }
 
   @media (width >= 1280px) {
-    .hamburger-menu,
     .logo-wrapper {
       display: none;
     }
