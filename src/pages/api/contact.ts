@@ -3,14 +3,13 @@ import { Resend } from "resend";
 
 export const prerender = false;
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
-
 type EmailPayload = {
   goal: string;
   email: string;
   name: string;
   company: string;
   country: string;
+  apiKey: string;
 };
 
 const sendEmail = async ({
@@ -19,12 +18,13 @@ const sendEmail = async ({
   name,
   company,
   country,
+  apiKey,
 }: EmailPayload) => {
-  const emailTo = import.meta.env.RESEND_TO_EMAIL;
-
+  // import.meta.env.RESEND_API_KEY
+  const resend = new Resend(apiKey);
   const sendResend = await resend.emails.send({
     from: "onboarding@resend.dev",
-    to: emailTo,
+    to: "matew17@gmail.com",
     subject: `Contacto de sitio web Orbita de parte de ${name}`,
     html: `
           <p>Hola, mi objetivo es ${goal}.</p>
@@ -38,10 +38,12 @@ const sendEmail = async ({
   return sendResend;
 };
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   if (request.headers.get("Content-Type") === "application/json") {
+    const { RESEND_API_KEY: apiKey } = locals.runtime.env;
+
     const body = await request.json();
-    const resendResponse = await sendEmail(body);
+    const resendResponse = await sendEmail({ ...body, apiKey });
 
     if (resendResponse.data) {
       return new Response(
