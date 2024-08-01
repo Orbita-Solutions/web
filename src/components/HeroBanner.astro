@@ -1,10 +1,13 @@
 ---
-import ImageSVG from "./shared/ImageSVG.astro";
+import { Image } from "astro:assets";
+
+import Logo from "@svgs/Logo.svg";
+import Scroll from "@svgs/Scroll.svg";
 ---
 
 <section class:list={["hero-container", "bring-up"]}>
   <div class="image-container">
-    <ImageSVG name="Logo" />
+    <Image src={Logo} alt="Orbita logo" />
   </div>
 
   <p class:list={["description", "body2"]}>
@@ -12,7 +15,7 @@ import ImageSVG from "./shared/ImageSVG.astro";
   </p>
 
   <div class="scroll-container">
-    <ImageSVG name="Scroll" />
+    <Image src={Scroll} alt="Scroll" />
     <p class="body2">Desliza hacia abajo.</p>
   </div>
 </section>

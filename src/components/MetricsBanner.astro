@@ -1,6 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import MetricCard from "@components/MetricCard.astro";
-import Icon from "./shared/Icon.astro";
+
+import MetricIcon1 from "@svgs/MetricIcon1.svg";
+import MetricIcon2 from "@svgs/MetricIcon2.svg";
+import MetricIcon3 from "@svgs/MetricIcon3.svg";
+import MetricIcon4 from "@svgs/MetricIcon4.svg";
 ---
 
 <section class:list={["metrics-container", "bring-up"]}>
@@ -16,7 +21,7 @@ import Icon from "./shared/Icon.astro";
     description="Increase user retention"
   >
     <div class="metric-icon-wrapper">
-      <Icon class="metric-icon" name="MetricIcon1" />
+      <Image src={MetricIcon1} alt="MetricIcon1" class="metric-icon" />
     </div>
   </MetricCard>
   <MetricCard
@@ -25,7 +30,7 @@ import Icon from "./shared/Icon.astro";
     description="Increase in product sales"
   >
     <div class="metric-icon-wrapper">
-      <Icon class="metric-icon" name="MetricIcon2" />
+      <Image src={MetricIcon2} alt="MetricIcon2" class="metric-icon" />
     </div>
   </MetricCard>
 
@@ -34,7 +39,7 @@ import Icon from "./shared/Icon.astro";
     description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
   >
     <div class="metric-icon-wrapper">
-      <Icon class="metric-icon" name="MetricIcon3" />
+      <Image src={MetricIcon3} alt="MetricIcon3" class="metric-icon" />
     </div>
   </MetricCard>
 
@@ -43,7 +48,7 @@ import Icon from "./shared/Icon.astro";
     description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
   >
     <div class="metric-icon-wrapper">
-      <Icon class="metric-icon" name="MetricIcon4" />
+      <Image src={MetricIcon4} alt="MetricIcon4" class="metric-icon" />
     </div>
   </MetricCard>
 </section>
@@ -99,6 +104,5 @@ import Icon from "./shared/Icon.astro";
   }
 
   @media (width >= 1920px) {
-    
   }
 </style>

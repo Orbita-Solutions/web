@@ -4,6 +4,8 @@ import { useState } from "react";
 import styles from "./MobileMenu.module.css";
 import { useEscape } from "@hooks/useEscape";
 
+export const prerender = false;
+
 export const MobileMenu = () => {
   const [isActive, setIsActive] = useState(false);
 

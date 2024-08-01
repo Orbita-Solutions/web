@@ -1,25 +1,64 @@
 ---
-import ImageSVG from "@components/shared/ImageSVG.astro";
+import { Image } from "astro:assets";
+
+import Ellipse from "@svgs/Ellipse.svg";
+import Vector1 from "@svgs/Vector1.svg";
+import Vector2 from "@svgs/Vector2.svg";
+import Vector3 from "@svgs/Vector3.svg";
+
+import EllipseTablet from "@svgs/Ellipse-tablet.svg";
+import Vector1Tablet from "@svgs/Vector1-tablet.svg";
+import Vector2Tablet from "@svgs/Vector2-tablet.svg";
+import Vector3Tablet from "@svgs/Vector3-tablet.svg";
+
+import EllipseDesktop from "@svgs/Ellipse-desktop.svg";
+import Vector1Desktop from "@svgs/Vector1-desktop.svg";
+import Vector2Desktop from "@svgs/Vector2-desktop.svg";
+import Vector3Desktop from "@svgs/Vector3-desktop.svg";
 ---
 
 <section class="app-container">
   <!-- Mobile -->
-  <ImageSVG class="app-centered-image ellipse" name="Ellipse" />
-  <ImageSVG class="app-centered-image vector1" name="Vector1" />
-  <ImageSVG class="app-centered-image vector2" name="Vector2" />
-  <ImageSVG class="app-centered-image vector3" name="Vector3" />
+  <div class="app-centered-image ellipse">
+    <Image src={Ellipse} alt="background image" />
+  </div>
+  <div class="app-centered-image vector1">
+    <Image src={Vector1} alt="background image" />
+  </div>
+  <div class="app-centered-image vector2">
+    <Image src={Vector2} alt="background image" />
+  </div>
+  <div class="app-centered-image vector3">
+    <Image src={Vector3} alt="background image" />
+  </div>
 
   <!-- Tablet -->
-  <ImageSVG class="app-centered-image ellipse-tablet" name="Ellipse-tablet" />
-  <ImageSVG class="app-centered-image vector1-tablet" name="Vector1-tablet" />
-  <ImageSVG class="app-centered-image vector2-tablet" name="Vector2-tablet" />
-  <ImageSVG class="app-centered-image vector3-tablet" name="Vector3-tablet" />
+  <div class="app-centered-image ellipse-tablet">
+    <Image src={EllipseTablet} alt="background image" />
+  </div>
+  <div class="app-centered-image vector1-tablet">
+    <Image src={Vector1Tablet} alt="background image" />
+  </div>
+  <div class="app-centered-image vector2-tablet">
+    <Image src={Vector2Tablet} alt="background image" />
+  </div>
+  <div class="app-centered-image vector3-tablet">
+    <Image src={Vector3Tablet} alt="background image" />
+  </div>
 
   <!-- Desktop -->
-  <ImageSVG class="app-centered-image ellipse-desktop" name="Ellipse-desktop" />
-  <ImageSVG class="app-centered-image vector1-desktop" name="Vector1-desktop" />
-  <ImageSVG class="app-centered-image vector2-desktop" name="Vector2-desktop" />
-  <ImageSVG class="app-centered-image vector3-desktop" name="Vector3-desktop" />
+  <div class="app-centered-image ellipse-desktop">
+    <Image src={EllipseDesktop} alt="background image" />
+  </div>
+  <div class="app-centered-image vector1-desktop">
+    <Image src={Vector1Desktop} alt="background image" />
+  </div>
+  <div class="app-centered-image vector2-desktop">
+    <Image src={Vector2Desktop} alt="background image" />
+  </div>
+  <div class="app-centered-image vector3-desktop">
+    <Image src={Vector3Desktop} alt="background image" />
+  </div>
 
   <slot />
 </section>

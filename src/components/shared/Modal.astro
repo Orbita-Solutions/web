@@ -1,5 +1,6 @@
 ---
-import ImageSVG from "./ImageSVG.astro";
+import { Image } from "astro:assets";
+import CloseBtn from "@svgs/CloseBtn.svg";
 
 export interface Props {
   id: string;
@@ -20,7 +21,7 @@ const { id, buttonText, class: className, ...rest } = Astro.props;
 <dialog id={id}>
   <form method="dialog" class="close-button">
     <button>
-      <ImageSVG name="CloseBtn" />
+      <Image src={CloseBtn} alt="Cerrar" />
     </button>
   </form>
 

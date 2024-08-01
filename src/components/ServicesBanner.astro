@@ -1,6 +1,11 @@
 ---
 import Button from "@components/shared/Button.astro";
 import ServicesCard from "@components/ServicesCard.astro";
+
+import MetricIcon2 from "@svgs/MetricIcon2.svg";
+import MetricIcon3 from "@svgs/MetricIcon3.svg";
+import MetricIcon4 from "@svgs/MetricIcon4.svg";
+import { Image } from "astro:assets";
 ---
 
 <section class:list={["bring-up", "services-wrapper"]}>
@@ -16,9 +21,15 @@ import ServicesCard from "@components/ServicesCard.astro";
     </div>
 
     <div class="cards-wrapper">
-      <ServicesCard serviceName="Service" iconName="MetricIcon3" />
-      <ServicesCard serviceName="Service" iconName="MetricIcon4" />
-      <ServicesCard serviceName="Service" iconName="MetricIcon2" />
+      <ServicesCard serviceName="Service">
+        <Image src={MetricIcon3} alt="MetricIcon1" class="metric-icon" />
+      </ServicesCard>
+      <ServicesCard serviceName="Service">
+        <Image src={MetricIcon4} alt="MetricIcon1" class="metric-icon" />
+      </ServicesCard>
+      <ServicesCard serviceName="Service">
+        <Image src={MetricIcon2} alt="MetricIcon1" class="metric-icon" />
+      </ServicesCard>
     </div>
   </div>
 

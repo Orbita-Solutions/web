@@ -1,19 +1,21 @@
 ---
+import { Image } from "astro:assets";
+
 import { MobileMenu } from "@components/islands/mobile-menu/MobileMenu";
-import Button from "./shared/Button.astro";
-import ImageSVG from "./shared/ImageSVG.astro";
+import Button from "@components/shared/Button.astro";
+import MenuLogo from "@svgs/menu-logo.svg";
 ---
 
 <nav class="nav-wrapper bring-up">
   <div class="desktop-menu">
-    <ImageSVG class="logo-wrapper-desktop" name="menu-logo" />
+    <Image src={MenuLogo} alt="Menu logo" class="logo-wrapper-desktop" />
     <a href="">Our work</a>
     <Button class="contact-btn">Contact Us</Button>
   </div>
 
-  <ImageSVG class="logo-wrapper" name="menu-logo" />
+  <Image src={MenuLogo} alt="Menu logo" class="logo-wrapper" />
 
-  <MobileMenu client:only />
+  <MobileMenu client:only="react" />
 </nav>
 
 <style>

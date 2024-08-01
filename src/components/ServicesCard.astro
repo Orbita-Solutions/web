@@ -1,18 +1,19 @@
 ---
 import Card from "@components/shared/Card.astro";
-import Icon from "./shared/Icon.astro";
 
 export interface Props {
-  iconName: string;
   serviceName: string;
 }
 
-const { iconName, serviceName } = Astro.props;
+const { serviceName } = Astro.props;
 ---
 
 <Card>
   <div class="service-card">
-    <Icon class="service-icon" name={iconName} />
+    <div class="service-icon">
+      <slot />
+    </div>
+    <!-- <Icon class="service-icon" name={iconName} /> -->
     <h5>{serviceName}</h5>
   </div>
 </Card>

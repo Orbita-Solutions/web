@@ -1,5 +1,7 @@
 ---
-import ImageSVG from "./shared/ImageSVG.astro";
+import { Image } from "astro:assets";
+
+import Logo from "@svgs/Logo.svg";
 ---
 
 <footer>
@@ -23,7 +25,7 @@ import ImageSVG from "./shared/ImageSVG.astro";
     </div>
   </section>
 
-  <ImageSVG class="logo" name="Logo" />
+  <Image src={Logo} class="logo" alt="Orbita Logo" />
 </footer>
 
 <style>
@@ -76,6 +78,6 @@ import ImageSVG from "./shared/ImageSVG.astro";
   @media (width >= 1280px) {
     footer {
       justify-content: space-around;
-    } 
+    }
   }
 </style>

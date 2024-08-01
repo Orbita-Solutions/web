@@ -1,13 +1,16 @@
 ---
-import ImageSVG from "@components/shared/ImageSVG.astro";
+import { Image } from "astro:assets";
+
+import Marca from "@svgs/Marca.svg";
+import Iris from "@svgs/Iris.svg";
 ---
 
 <section class:list={["customers", "bring-up"]}>
-  <ImageSVG class="icon" name="Marca" />
-  <ImageSVG class="icon" name="Marca" />
-  <ImageSVG class="icon" name="Iris" />
-  <ImageSVG class="icon" name="Marca" />
-  <ImageSVG class="icon" name="Marca" />
+  <Image class="icon" src={Marca} alt="Marca" />
+  <Image class="icon" src={Marca} alt="Marca" />
+  <Image class="icon" src={Iris} alt="Marca" />
+  <Image class="icon" src={Marca} alt="Marca" />
+  <Image class="icon" src={Marca} alt="Marca" />
 </section>
 
 <style>
