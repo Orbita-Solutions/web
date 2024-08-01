@@ -8,8 +8,6 @@ export default defineConfig({
   output: "hybrid",
   integrations: [react()],
   adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
+    imageService: "cloudflare",
   }),
 });
