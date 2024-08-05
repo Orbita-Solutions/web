@@ -20,7 +20,6 @@ const sendEmail = async ({
   country,
   apiKey,
 }: EmailPayload) => {
-  // import.meta.env.RESEND_API_KEY
   const resend = new Resend(apiKey);
   const sendResend = await resend.emails.send({
     from: "onboarding@resend.dev",
@@ -40,6 +39,8 @@ const sendEmail = async ({
 
 export const POST: APIRoute = async ({ request, locals }) => {
   if (request.headers.get("Content-Type") === "application/json") {
+    // This is how we get ENV Variables from Cloudflare. (TODO: Add logic so it works locally too.)
+    // import.meta.env.RESEND_API_KEY
     const { RESEND_API_KEY: apiKey } = locals.runtime.env;
 
     const body = await request.json();
