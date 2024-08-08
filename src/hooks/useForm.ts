@@ -5,7 +5,7 @@ type FormState<T> = T;
 const useForm = <T extends Record<string, any>>(initialState: FormState<T>) => {
   const [formState, setFormState] = useState<FormState<T>>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -21,7 +21,7 @@ const useForm = <T extends Record<string, any>>(initialState: FormState<T>) => {
   ) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError(null);
+    setMessage(null);
 
     try {
       const response = await fetch(apiUrl, {
@@ -38,8 +38,9 @@ const useForm = <T extends Record<string, any>>(initialState: FormState<T>) => {
 
       // Handle successful form submission (e.g., show a success message, clear the form, etc.)
       setFormState(initialState);
+      setMessage("Mensaje enviado correctamente.");
     } catch (err: any) {
-      setError(err.message);
+      setMessage("Error al enviar el correo electronico.");
     } finally {
       setIsSubmitting(false);
     }
@@ -48,9 +49,10 @@ const useForm = <T extends Record<string, any>>(initialState: FormState<T>) => {
   return {
     formState,
     isSubmitting,
-    error,
+    message,
     handleChange,
     handleSubmit,
+    setMessage,
   };
 };
 

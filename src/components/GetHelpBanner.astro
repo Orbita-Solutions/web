@@ -15,7 +15,7 @@ import Modal from "@components/shared/Modal.astro";
     id="contactdialog"
     buttonText="Let us Contact You"
   >
-    <main slot="main">
+    <main class="dialog-content" slot="main">
       <ContactForm client:load />
     </main>
   </Modal>
@@ -43,6 +43,10 @@ import Modal from "@components/shared/Modal.astro";
   .name {
     font-size: 16px;
     font-weight: 600;
+  }
+
+  .dialog-content {
+    height: 90%;
   }
 
   .contact-button {

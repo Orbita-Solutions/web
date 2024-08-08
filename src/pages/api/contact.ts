@@ -4,21 +4,23 @@ import { Resend } from "resend";
 export const prerender = false;
 
 type EmailPayload = {
-  goal: string;
-  email: string;
-  name: string;
+  apiKey: string;
   company: string;
   country: string;
-  apiKey: string;
+  email: string;
+  goal: string;
+  name: string;
+  phone: string;
 };
 
 const sendEmail = async ({
-  goal,
-  email,
-  name,
+  apiKey,
   company,
   country,
-  apiKey,
+  email,
+  goal,
+  name,
+  phone,
 }: EmailPayload) => {
   const resend = new Resend(apiKey);
   const sendResend = await resend.emails.send({
@@ -31,6 +33,7 @@ const sendEmail = async ({
           <p>Empresa: ${company}</p>
           <p>Pais: ${country}</p>
           <p>Email: ${email}</p>
+          <p>Phone: ${phone}</p>
       `,
   });
 
@@ -39,10 +42,9 @@ const sendEmail = async ({
 
 export const POST: APIRoute = async ({ request, locals }) => {
   if (request.headers.get("Content-Type") === "application/json") {
-    // This is how we get ENV Variables from Cloudflare. (TODO: Add logic so it works locally too.)
-    // import.meta.env.RESEND_API_KEY
-    const { RESEND_API_KEY: apiKey } = locals.runtime.env;
-
+    // This is how we get ENV Variables from Cloudflare or local env.
+    const apiKey =
+      locals.runtime.env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
     const body = await request.json();
     const resendResponse = await sendEmail({ ...body, apiKey });
 

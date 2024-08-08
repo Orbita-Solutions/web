@@ -2,27 +2,49 @@ import styles from "./ContactForm.module.css";
 import useForm from "@hooks/useForm";
 
 interface ContactFormState {
-  goal: string;
-  email: string;
-  name: string;
   company: string;
   country: string;
+  email: string;
+  goal: string;
+  name: string;
+  phone: string;
 }
 
 const initialState: ContactFormState = {
-  goal: "",
-  email: "",
-  name: "",
   company: "",
   country: "",
+  email: "",
+  goal: "",
+  name: "",
+  phone: "",
 };
 
 export const ContactForm: React.FC = () => {
-  const { formState, isSubmitting, error, handleChange, handleSubmit } =
-    useForm<ContactFormState>(initialState);
+  const {
+    formState,
+    isSubmitting,
+    message,
+    handleChange,
+    handleSubmit,
+    setMessage,
+  } = useForm<ContactFormState>(initialState);
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) =>
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (formState.goal.trim() === "") {
+      setMessage("El Campo Objetivo es requerido.");
+      return;
+    } else if (formState.name.trim() === "") {
+      setMessage("El Campo Nombre es requerido.");
+      return;
+    } else if (formState.phone.trim() === "") {
+      setMessage("El Campo Telefono es requerido.");
+      return;
+    }
+
     handleSubmit(event, "/api/contact");
+  };
 
   return (
     <form className={styles.form} noValidate onSubmit={onSubmit}>
@@ -31,17 +53,8 @@ export const ContactForm: React.FC = () => {
         <input
           id="goal"
           type="text"
+          required
           value={formState.goal}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="text"
-          value={formState.email}
           onChange={handleChange}
         />
       </div>
@@ -51,7 +64,30 @@ export const ContactForm: React.FC = () => {
         <input
           id="name"
           type="text"
+          required
           value={formState.name}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div>
+        <label htmlFor="phone">Your Phone number</label>
+        <input
+          id="phone"
+          type="tel"
+          required
+          value={formState.phone}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div>
+        <label htmlFor="email">Your Email Address</label>
+        <input
+          id="email"
+          type="email"
+          required
+          value={formState.email}
           onChange={handleChange}
         />
       </div>
@@ -61,6 +97,7 @@ export const ContactForm: React.FC = () => {
         <input
           id="company"
           type="text"
+          required
           value={formState.company}
           onChange={handleChange}
         />
@@ -71,15 +108,17 @@ export const ContactForm: React.FC = () => {
         <input
           id="country"
           type="text"
+          required
           value={formState.country}
           onChange={handleChange}
         />
       </div>
 
+      {message && <p className={styles.message}>{message}</p>}
+
       <button className={styles.btn} type="submit" disabled={isSubmitting}>
         {isSubmitting ? "Submitting..." : "Let's Talk"}
       </button>
-      {error && <p className={styles.error}>{error}</p>}
     </form>
   );
 };
