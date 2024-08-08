@@ -1,0 +1,28 @@
+{
+  "title": "Estamos Aquí para Impulsar tus Ideas",
+  "description": "¿Tienes preguntas o necesitas orientación? Nuestro CEO está disponible para ayudarte a dar el siguiente paso en tu proyecto. Conéctate con nosotros y hagamos que tus ideas despeguen.",
+  "buttonLabel": "Hablemos de tu Proyecto",
+  "founder": {
+    "role": "CEO",
+    "name": "Mateo",
+    "phoneApi": "https://api.whatsapp.com/send?phone=573122673240&amp;text=Hola",
+    "phone": "+57 312 267 3240",
+    "email": "orbitasolutionssas@gmail.com"
+  },
+  "admin": {
+    "role": "Directora Ejecutiva",
+    "name": "Luisa",
+    "phoneApi": "https://api.whatsapp.com/send?phone=573137972127&amp;text=Hola",
+    "phone": "+57 313 797 2127",
+    "email": "orbitasolutionssas@gmail.com"
+  },
+  "form": {
+    "company": "¿En qué empresa trabajas?",
+    "country": "¿Desde qué país nos contactas?",
+    "email": "Tu email para que podamos hablar",
+    "goal": "¿Cuál es tu objetivo o proyecto?",
+    "name": "¿Cómo te llamas?",
+    "phone": "¿Podemos llamarte? Déjanos tu número",
+    "buttonLabel": "Envíar"
+  }
+}

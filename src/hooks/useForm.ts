@@ -38,9 +38,13 @@ const useForm = <T extends Record<string, any>>(initialState: FormState<T>) => {
 
       // Handle successful form submission (e.g., show a success message, clear the form, etc.)
       setFormState(initialState);
-      setMessage("Mensaje enviado correctamente.");
+      setMessage(
+        "¡Gracias por contactarnos! Hemos recibido tu información y nos pondremos en contacto contigo muy pronto."
+      );
     } catch (err: any) {
-      setMessage("Error al enviar el correo electronico.");
+      setMessage(
+        "¡Ups! Parece que hubo un error. Por favor, intenta de nuevo o contactanos directamente a traves de nuestros numeros de whatsapp."
+      );
     } finally {
       setIsSubmitting(false);
     }

@@ -1,11 +1,16 @@
 ---
+import Image from "astro/components/Image.astro";
+import WS from "@svgs/ws.svg";
+
 export interface Props {
   position: string;
   name: string;
   email: string;
+  phoneUrl: string;
+  phone: string;
 }
 
-const { position, name, email } = Astro.props;
+const { position, name, email, phoneUrl, phone } = Astro.props;
 ---
 
 <div class="contact">
@@ -13,7 +18,20 @@ const { position, name, email } = Astro.props;
 
   <div class="info-wrapper">
     <p class="name">{name}</p>
-    <p class="email body2">{email}</p>
+
+    <a
+      class="phone-wrapper"
+      href={phoneUrl}
+      target="_blank"
+      referrerpolicy="no-referrer"
+    >
+      <Image src={WS} alt="WhatsApp Icon" width={16} height={16} />
+      <p class="name">{phone}</p>
+    </a>
+
+    <a href=`mailto:${email}` target="_blank" referrerpolicy="no-referrer">
+      <p class="email body2">{email}</p>
+    </a>
   </div>
 </div>
 
@@ -35,9 +53,19 @@ const { position, name, email } = Astro.props;
     font-weight: 600;
   }
 
+  .phone-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
   .info-wrapper {
     display: flex;
     flex-flow: column;
+  }
+
+  .info-wrapper > a {
+    text-decoration: none;
   }
 
   @media (width >= 767px) {

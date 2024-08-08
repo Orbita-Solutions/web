@@ -1,3 +1,4 @@
+import type { Help } from "@core/types/help";
 import styles from "./ContactForm.module.css";
 import useForm from "@hooks/useForm";
 
@@ -19,7 +20,11 @@ const initialState: ContactFormState = {
   phone: "",
 };
 
-export const ContactForm: React.FC = () => {
+type Props = {
+  formLabels: Help["form"];
+};
+
+export const ContactForm: React.FC<Props> = ({ formLabels }) => {
   const {
     formState,
     isSubmitting,
@@ -33,13 +38,15 @@ export const ContactForm: React.FC = () => {
     event.preventDefault();
 
     if (formState.goal.trim() === "") {
-      setMessage("El Campo Objetivo es requerido.");
+      setMessage(
+        "Cuéntanos cuál es tu objetivo para que podamos orientarte mejor."
+      );
       return;
     } else if (formState.name.trim() === "") {
-      setMessage("El Campo Nombre es requerido.");
+      setMessage("Por favor, dinos cómo te llamas para poder ayudarte.");
       return;
     } else if (formState.phone.trim() === "") {
-      setMessage("El Campo Telefono es requerido.");
+      setMessage("Necesitamos tu número de teléfono para poder contactarte.");
       return;
     }
 
@@ -49,7 +56,7 @@ export const ContactForm: React.FC = () => {
   return (
     <form className={styles.form} noValidate onSubmit={onSubmit}>
       <div>
-        <label htmlFor="goal">Your goal</label>
+        <label htmlFor="goal">{formLabels.goal}</label>
         <input
           id="goal"
           type="text"
@@ -60,7 +67,7 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">{formLabels.name}</label>
         <input
           id="name"
           type="text"
@@ -71,7 +78,7 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="phone">Your Phone number</label>
+        <label htmlFor="phone">{formLabels.phone}</label>
         <input
           id="phone"
           type="tel"
@@ -82,7 +89,7 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="email">Your Email Address</label>
+        <label htmlFor="email">{formLabels.email}</label>
         <input
           id="email"
           type="email"
@@ -93,7 +100,7 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="company">Company</label>
+        <label htmlFor="company">{formLabels.company}</label>
         <input
           id="company"
           type="text"
@@ -104,7 +111,7 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="country">Country</label>
+        <label htmlFor="country">{formLabels.country}</label>
         <input
           id="country"
           type="text"
@@ -117,7 +124,7 @@ export const ContactForm: React.FC = () => {
       {message && <p className={styles.message}>{message}</p>}
 
       <button className={styles.btn} type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Submitting..." : "Let's Talk"}
+        {isSubmitting ? "Enviando..." : formLabels.buttonLabel}
       </button>
     </form>
   );
