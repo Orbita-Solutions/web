@@ -1,3 +1,5 @@
+import { base64ToUtf8 } from "./utils/base64ToUtf8";
+
 const GHApi =
   "https://api.github.com/repos/Orbita-Solutions/web/contents/public/data";
 const localURL = "http://localhost:4321/data";
@@ -14,7 +16,7 @@ const mapResponse = (data: any) => {
 
   // Github encondes / decodes the json in the content attribute as base64
   if (!isDev) {
-    const decoded = atob((data as any).content);
+    const decoded = base64ToUtf8(data.content);
 
     return JSON.parse(decoded);
   }
