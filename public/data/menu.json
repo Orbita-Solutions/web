@@ -1,0 +1,17 @@
+{
+  "logoImage": "",
+  "items": {
+    "work": {
+      "label": "Proyectos en Órbita",
+      "url": "/work"
+    },
+    "contact": {
+      "label": "Conecta",
+      "url": "#getHelp"
+    }
+  },
+  "mobileButtons": {
+    "open": "Menu",
+    "close": "Cerrar"
+  }
+}

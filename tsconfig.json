@@ -3,18 +3,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@svgs/*": [
-        "src/svgs/*"
-      ]
+      "@components/*": ["src/components/*"],
+      "@core/*": ["src/core/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@svgs/*": ["src/svgs/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

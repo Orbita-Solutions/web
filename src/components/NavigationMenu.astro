@@ -1,21 +1,34 @@
 ---
 import { Image } from "astro:assets";
 
+import { getContentApiURL } from "@core/api";
 import { MobileMenu } from "@components/islands/mobile-menu/MobileMenu";
-import Button from "@components/shared/Button.astro";
 import MenuLogo from "@svgs/menu-logo.svg";
+import type { Menu } from "@core/types/menu.type";
+
+const apiUrl = getContentApiURL("menu");
+
+const response = await fetch(apiUrl);
+const data: Menu = await response.json();
 ---
 
 <nav class="nav-wrapper bring-up">
   <div class="desktop-menu">
     <Image src={MenuLogo} alt="Menu logo" class="logo-wrapper-desktop" />
-    <a href="">Our work</a>
-    <Button class="contact-btn">Contact Us</Button>
+    <a href={data.items.work.url}>{data.items.work.label}</a>
+    <a href={data.items.contact.url} class="btn energy contact-btn">
+      {data.items.contact.label}
+    </a>
   </div>
 
   <Image src={MenuLogo} alt="Menu logo" class="logo-wrapper" />
 
-  <MobileMenu client:only="react" />
+  <MobileMenu
+    openLabel={data.mobileButtons.open}
+    closeLabel={data.mobileButtons.close}
+    items={data.items}
+    client:only="react"
+  />
 </nav>
 
 <style>
@@ -75,8 +88,6 @@ import MenuLogo from "@svgs/menu-logo.svg";
     .contact-btn {
       width: 103px;
       height: 30px;
-      background: var(--energy-blue);
-      color: var(--button-energy-blue);
       font-size: 13px;
       line-height: 22px;
       padding: 4px 13px;
