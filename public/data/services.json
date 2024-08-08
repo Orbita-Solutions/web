@@ -1,0 +1,32 @@
+{
+  "title": "Transforma tu Visión en Realidad Digital",
+  "description": "En Orbita Solutions, ofrecemos soluciones de desarrollo que impulsan tu negocio al siguiente nivel. Desde sitios web impactantes hasta aplicaciones personalizadas, nuestros servicios están diseñados para dar vida a tus ideas, garantizando calidad, eficiencia y una experiencia de usuario inigualable.",
+  "buttonLabel": "Descubre Más",
+  "buttonUrl": "/services",
+  "services": [
+    {
+      "name": "Webs que Inspiran",
+      "description": "Crea una presencia en línea atractiva y funcional que cautive a tus usuarios.",
+      "originalName": "Desarrollo de Sitios Web Dinámicos y Estáticos",
+      "iconName": "MetricIcon2"
+    },
+    {
+      "name": "Soluciones Personalizadas",
+      "description": "Transformamos tus necesidades únicas en aplicaciones eficientes y escalables.",
+      "originalName": "Desarrollo de Aplicativos y Soluciones a la Medida",
+      "iconName": "MetricIcon3"
+    },
+    {
+      "name": "Apps que Conectan",
+      "description": "Desarrollamos aplicaciones móviles intuitivas que acercan tu marca a tus clientes.",
+      "originalName": "Desarrollo de Aplicativos Móviles",
+      "iconName": "MetricIcon4"
+    },
+    {
+      "name": "Software Potente para Escritorio",
+      "description": "Aplicaciones robustas y de alto rendimiento para Mac y Windows.",
+      "originalName": "Desarrollo de Aplicativos para Escritorio (Mac y Windows)",
+      "iconName": "MetricIcon1"
+    }
+  ]
+}

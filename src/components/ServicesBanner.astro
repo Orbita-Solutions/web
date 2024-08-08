@@ -1,39 +1,46 @@
 ---
-import Button from "@components/shared/Button.astro";
+import { getData } from "@core/api";
+import { getIconSource } from "@core/utils/getIconByName";
+import { Image } from "astro:assets";
+
 import ServicesCard from "@components/ServicesCard.astro";
 
-import MetricIcon2 from "@svgs/MetricIcon2.svg";
-import MetricIcon3 from "@svgs/MetricIcon3.svg";
-import MetricIcon4 from "@svgs/MetricIcon4.svg";
-import { Image } from "astro:assets";
+import type { ServicesData } from "@core/types/services";
+
+const data: ServicesData = await getData("services");
 ---
 
 <section class:list={["bring-up", "services-wrapper"]}>
   <div class="our-services">
     <div class="title-wrapper">
-      <h3>Our Services</h3>
+      <h3>{data.title}</h3>
       <p class="title-description">
-        Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis
-        donec euismod.
+        {data.description}
       </p>
 
-      <Button class="services-button"> View all services </Button>
+      <a href={data.buttonUrl} class="btn primary services-button">
+        {data.buttonLabel}
+      </a>
     </div>
 
     <div class="cards-wrapper">
-      <ServicesCard serviceName="Service">
-        <Image src={MetricIcon3} alt="MetricIcon1" class="metric-icon" />
-      </ServicesCard>
-      <ServicesCard serviceName="Service">
-        <Image src={MetricIcon4} alt="MetricIcon1" class="metric-icon" />
-      </ServicesCard>
-      <ServicesCard serviceName="Service">
-        <Image src={MetricIcon2} alt="MetricIcon1" class="metric-icon" />
-      </ServicesCard>
+      {
+        data.services.map(({ name, iconName }) => (
+          <ServicesCard serviceName={name}>
+            <Image
+              src={getIconSource(iconName)}
+              alt={name}
+              class="metric-icon"
+            />
+          </ServicesCard>
+        ))
+      }
     </div>
   </div>
 
-  <Button class="services-button-mobile"> View all services </Button>
+  <a href={data.buttonUrl} class="btn primary services-button-mobile">
+    {data.buttonLabel}
+  </a>
 </section>
 
 <style>
@@ -54,6 +61,10 @@ import { Image } from "astro:assets";
     display: flex;
     flex-flow: column;
     gap: 16px;
+  }
+
+  .title-wrapper > h3 {
+    font-size: 42px;
   }
 
   .cards-wrapper {
