@@ -4,21 +4,25 @@ import { Image } from "astro:assets";
 import { getData } from "@core/api";
 import { MobileMenu } from "@components/islands/mobile-menu/MobileMenu";
 import MenuLogo from "@svgs/menu-logo.svg";
-import type { Menu } from "@core/types/menu.type";
+import type { Menu } from "@core/types/menu";
 
 const data: Menu = await getData("menu");
 ---
 
 <nav class="nav-wrapper bring-up">
   <div class="desktop-menu">
-    <Image src={MenuLogo} alt="Menu logo" class="logo-wrapper-desktop" />
+    <Image
+      src={MenuLogo}
+      alt={data.logoImage.alt}
+      class="logo-wrapper-desktop"
+    />
     <a href={data.items.work.url}>{data.items.work.label}</a>
     <a href={data.items.contact.url} class="btn energy contact-btn">
       {data.items.contact.label}
     </a>
   </div>
 
-  <Image src={MenuLogo} alt="Menu logo" class="logo-wrapper" />
+  <Image src={MenuLogo} alt={data.logoImage.alt} class="logo-wrapper" />
 
   <MobileMenu
     openLabel={data.mobileButtons.open}

@@ -3,20 +3,25 @@ import { Image } from "astro:assets";
 
 import Logo from "@svgs/Logo.svg";
 import Scroll from "@svgs/Scroll.svg";
+import { getData } from "@core/api";
+
+import type { HeroBanner } from "@core/types/hero";
+
+const data: HeroBanner = await getData("hero");
 ---
 
 <section class:list={["hero-container", "bring-up"]}>
   <div class="image-container">
-    <Image src={Logo} alt="Orbita logo" />
+    <Image src={Logo} alt={data.logo.alt} />
   </div>
 
   <p class:list={["description", "body2"]}>
-    Tu visión, nuestra misión: Despega con Orbita.
+    {data.slogan}
   </p>
 
   <div class="scroll-container">
     <Image src={Scroll} alt="Scroll" />
-    <p class="body2">Desliza hacia abajo.</p>
+    <p class="body2">{data.scrollDown}</p>
   </div>
 </section>
 

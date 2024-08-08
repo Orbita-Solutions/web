@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import styles from "./MobileMenu.module.css";
 import { useEscape } from "@hooks/useEscape";
-import type { Menu } from "@core/types/menu.type";
+import type { Menu } from "@core/types/menu";
 
 export const prerender = false;
 

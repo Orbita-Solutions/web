@@ -1,5 +1,8 @@
 {
-  "logoImage": "",
+  "logoImage": {
+    "src": "",
+    "alt": "Logo de orbita"
+  },
   "items": {
     "work": {
       "label": "Proyectos en Órbita",

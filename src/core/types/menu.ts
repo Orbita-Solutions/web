@@ -1,10 +1,12 @@
+import type { Image } from "./image";
+
 type MenuItem = {
   label: string;
   url: string;
 };
 
 export type Menu = {
-  logoImage: string;
+  logoImage: Image;
   items: {
     work: MenuItem;
     contact: MenuItem;
