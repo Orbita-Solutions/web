@@ -1,0 +1,24 @@
+{
+  "metrics": [
+    {
+      "value": "30%",
+      "description": "de ahorro en costos y tiempo para nuestros clientes.",
+      "iconName": "MetricIcon1"
+    },
+    {
+      "value": "40%",
+      "description": "de mejora en eficiencia operativa de nuestros clientes.",
+      "iconName": "MetricIcon2"
+    },
+    {
+      "value": "200%",
+      "description": "de ROI (Retorno inversion) promedio en proyectos de desarrollo.",
+      "iconName": "MetricIcon3"
+    },
+    {
+      "value": "15",
+      "description": "Años de experiencia combinada en desarrollo de software",
+      "iconName": "MetricIcon4"
+    }
+  ]
+}

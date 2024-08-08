@@ -1,21 +1,41 @@
 ---
 import { Image } from "astro:assets";
 import MetricCard from "@components/MetricCard.astro";
+import { getData } from "@core/api";
+import { getIconSource } from "@core/utils/getIconByName";
+import type { MetricsData } from "@core/types/Metric";
 
-import MetricIcon1 from "@svgs/MetricIcon1.svg";
-import MetricIcon2 from "@svgs/MetricIcon2.svg";
-import MetricIcon3 from "@svgs/MetricIcon3.svg";
-import MetricIcon4 from "@svgs/MetricIcon4.svg";
+const data: MetricsData = await getData("metrics");
 ---
 
 <section class:list={["metrics-container", "bring-up"]}>
   <!-- Mobile only -->
+
+  <!-- Mobile only -->
   <div class="metrics-partial-container">
-    <MetricCard title="45%" description="Increase user retention" />
-    <MetricCard title="15%" description="Increase in product sales" />
+    {
+      data.metrics.map(({ value, description }) => (
+        <MetricCard title={value} description={description} />
+      ))
+    }
   </div>
 
-  <MetricCard
+  <!-- Desktop Only -->
+  {
+    data.metrics.map(({ value, description, iconName }) => (
+      <MetricCard class="desktop-only" title={value} description={description}>
+        <div class="metric-icon-wrapper">
+          <Image
+            class="metric-icon"
+            src={getIconSource(iconName)}
+            alt="Icono de metricas"
+          />
+        </div>
+      </MetricCard>
+    ))
+  }
+
+  <!-- <MetricCard
     class="desktop-only"
     title="45%"
     description="Increase user retention"
@@ -32,9 +52,9 @@ import MetricIcon4 from "@svgs/MetricIcon4.svg";
     <div class="metric-icon-wrapper">
       <Image src={MetricIcon2} alt="MetricIcon2" class="metric-icon" />
     </div>
-  </MetricCard>
+  </MetricCard> -->
 
-  <MetricCard
+  <!-- <MetricCard
     title="999"
     description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
   >
@@ -50,7 +70,7 @@ import MetricIcon4 from "@svgs/MetricIcon4.svg";
     <div class="metric-icon-wrapper">
       <Image src={MetricIcon4} alt="MetricIcon4" class="metric-icon" />
     </div>
-  </MetricCard>
+  </MetricCard> -->
 </section>
 
 <style>
@@ -66,8 +86,13 @@ import MetricIcon4 from "@svgs/MetricIcon4.svg";
     display: flex;
     flex-flow: row;
     gap: 24px;
-    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .metrics-partial-container > :nth-child(1),
+  .metrics-partial-container > :nth-child(2) {
+    width: calc(50% - 12px);
   }
 
   .metric-icon-wrapper {
