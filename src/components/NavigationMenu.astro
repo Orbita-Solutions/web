@@ -1,15 +1,12 @@
 ---
 import { Image } from "astro:assets";
 
-import { getContentApiURL } from "@core/api";
+import { getData } from "@core/api";
 import { MobileMenu } from "@components/islands/mobile-menu/MobileMenu";
 import MenuLogo from "@svgs/menu-logo.svg";
 import type { Menu } from "@core/types/menu.type";
 
-const apiUrl = getContentApiURL("menu");
-
-const response = await fetch(apiUrl);
-const data: Menu = await response.json();
+const data: Menu = await getData("menu");
 ---
 
 <nav class="nav-wrapper bring-up">
