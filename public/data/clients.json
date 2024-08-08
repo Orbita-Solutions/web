@@ -1,0 +1,54 @@
+{
+  "clients": [
+    {
+      "name": "SKG Tecnologia",
+      "siteUrl": "https://skgtecnologia.com/",
+      "logo": {
+        "src": "skg",
+        "alt": "Logo de SKG",
+        "width": 120,
+        "height": 32
+      }
+    },
+    {
+      "name": "Fraktal Software",
+      "siteUrl": "https://fraktalsoftware.com/",
+      "logo": {
+        "src": "fraktal",
+        "alt": "Logo de Fraktal",
+        "width": 45,
+        "height": 45
+      }
+    },
+    {
+      "name": "Ferremaster",
+      "siteUrl": "https://ferremaster.com/",
+      "logo": {
+        "src": "ferremaster",
+        "alt": "Logo de Ferremaster",
+        "width": 120,
+        "height": 47
+      }
+    },
+    {
+      "name": "Iris",
+      "siteUrl": "https://www.iriscol.com/",
+      "logo": {
+        "src": "iris",
+        "alt": "Logo de Iris",
+        "width": 35,
+        "height": 42
+      }
+    },
+    {
+      "name": "Naturnia",
+      "siteUrl": "https://www.naturnia.com.co/",
+      "logo": {
+        "src": "naturnia",
+        "alt": "Logo de Naturnia",
+        "width": 140,
+        "height": 105
+      }
+    }
+  ]
+}

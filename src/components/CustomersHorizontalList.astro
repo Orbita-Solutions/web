@@ -1,16 +1,35 @@
 ---
 import { Image } from "astro:assets";
 
-import Marca from "@svgs/Marca.svg";
-import Iris from "@svgs/Iris.svg";
+import { getData } from "@core/api";
+import { getIconSource } from "@core/utils/getIconByName";
+import type { ClientsData } from "@core/types/clients";
+
+const data: ClientsData = await getData("clients");
 ---
 
 <section class:list={["customers", "bring-up"]}>
-  <Image class="icon" src={Marca} alt="Marca" />
-  <Image class="icon" src={Marca} alt="Marca" />
-  <Image class="icon" src={Iris} alt="Marca" />
-  <Image class="icon" src={Marca} alt="Marca" />
-  <Image class="icon" src={Marca} alt="Marca" />
+  {
+    data.clients.map(({ name, logo, siteUrl }) => (
+      <a
+        class="icon"
+        href={siteUrl}
+        target="_blank"
+        referrerpolicy="no-referrer"
+      >
+        <Image
+          style={{
+            filter: "brightness(0) invert(1)",
+          }}
+          src={getIconSource(logo.src)}
+          alt={logo.alt}
+          width={logo.width}
+          height={logo.height}
+          title={name}
+        />
+      </a>
+    ))
+  }
 </section>
 
 <style>
@@ -33,6 +52,8 @@ import Iris from "@svgs/Iris.svg";
 
   .icon {
     margin-left: auto;
+    min-width: 150px;
+    text-align: center;
   }
   .icon:last-child {
     margin-right: auto;
