@@ -41,6 +41,16 @@
       }
     },
     {
+      "name": "CIC",
+      "siteUrl": "https://www.ciclaboratorios.com/",
+      "logo": {
+        "src": "cic",
+        "alt": "Logo de CIC",
+        "width": 140,
+        "height": 105
+      }
+    },
+    {
       "name": "Naturnia",
       "siteUrl": "https://www.naturnia.com.co/",
       "logo": {

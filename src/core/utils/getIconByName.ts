@@ -8,6 +8,7 @@ import SKG from "@svgs/logo-SKG.png";
 import Naturnia from "@svgs/naturnia.webp";
 import Ferremaster from "@svgs/ferremaster.png";
 import Fraktal from "@svgs/Fraktal.svg";
+import CIC from "@svgs/cic.svg";
 
 export const getIconSource = (iconName: string) => {
   switch (iconName) {
@@ -29,6 +30,8 @@ export const getIconSource = (iconName: string) => {
       return Ferremaster;
     case "fraktal":
       return Fraktal;
+    case "cic":
+      return CIC;
     default:
       return MetricIcon4;
   }

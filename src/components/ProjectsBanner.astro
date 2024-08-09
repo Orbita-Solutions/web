@@ -1,7 +1,6 @@
 ---
 import type { ProjectsData } from "@core/types/projects";
 import ProjectCard from "./ProjectCard.astro";
-import Button from "./shared/Button.astro";
 import { getData } from "@core/api";
 
 const data: ProjectsData = await getData("projects");
