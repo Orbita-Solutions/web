@@ -23,12 +23,13 @@ const sendEmail = async ({
   phone,
 }: EmailPayload) => {
   const resend = new Resend(apiKey);
+
   const sendResend = await resend.emails.send({
     from: "noreply@orbitasolutions.co",
-    to: "orbitasolutionssas@gmail.com",
+    to: ["orbitasolutionssas@gmail.com", email],
     subject: `Contacto de sitio web Orbita de parte de ${name}`,
     html: `
-          <p>Hola, mi objetivo es ${goal}.</p>
+          <p>Objectivo: ${goal}.</p>
           <p>Nombre: ${name}</p>
           <p>Empresa: ${company}</p>
           <p>Pais: ${country}</p>
