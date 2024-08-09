@@ -56,9 +56,11 @@ const {
 
   .project-attributes {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-start;
     gap: 8px;
+    flex-wrap: wrap;
+    min-height: 50px;
   }
 
   .separator {
@@ -66,12 +68,20 @@ const {
     height: 5px;
     border-radius: 5px;
     background: var(--energy-blue);
+    align-self: auto;
   }
 
   .project-card {
     display: flex;
     flex-flow: column;
     gap: 16px;
+  }
+
+  .project-card > h4 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    min-height: 185px;
   }
 
   .logo {
@@ -83,7 +93,7 @@ const {
   }
 
   .body1 {
-    min-height: 120px;
+    min-height: 220px;
   }
 
   @media (width >= 767px) {
@@ -91,6 +101,17 @@ const {
       background: var(--paper);
       min-width: 536px;
       width: 536px;
+    }
+
+    .project-card > h4 {
+      font-size: 34px;
+      line-height: 42px;
+      font-weight: 400;
+      min-height: unset;
+    }
+
+    .body1 {
+      min-height: 120px;
     }
   }
 </style>

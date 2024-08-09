@@ -16,20 +16,24 @@ const data: ProjectsData = await getData("projects");
 
   <section class="project-cards-wrapper">
     {
-      data.projects.map(({ attributes, bannerImage, description, title, projectUrl }) => (
-        <ProjectCard
-          attributes={attributes}
-          imgAlt={bannerImage.alt}
-          imgUrl={bannerImage.src}
-          projectDescription={description}
-          projectName={title}
-          projectUrl={projectUrl}
-        />
-      ))
+      data.projects.map(
+        ({ attributes, bannerImage, description, title, projectUrl }) => (
+          <ProjectCard
+            attributes={attributes}
+            imgAlt={bannerImage.alt}
+            imgUrl={bannerImage.src}
+            projectDescription={description}
+            projectName={title}
+            projectUrl={projectUrl}
+          />
+        )
+      )
     }
   </section>
 
-  <a href={data.button.url} class="btn primary projects-button"> {data.button.label}</a>
+  <a href={data.button.url} class="btn primary projects-button">
+    {data.button.label}</a
+  >
 </section>
 
 <style>
@@ -53,7 +57,7 @@ const data: ProjectsData = await getData("projects");
     overflow-x: auto;
     display: flex;
     flex-flow: row;
-    align-items: center;
+    /* align-items: center; */
     gap: 24px;
     scrollbar-width: none;
     flex-wrap: nowrap;
