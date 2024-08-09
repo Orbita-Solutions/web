@@ -24,8 +24,8 @@ const sendEmail = async ({
 }: EmailPayload) => {
   const resend = new Resend(apiKey);
   const sendResend = await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "matew17@gmail.com",
+    from: "noreply@orbitasolutions.co",
+    to: "orbitasolutionssas@gmail.com",
     subject: `Contacto de sitio web Orbita de parte de ${name}`,
     html: `
           <p>Hola, mi objetivo es ${goal}.</p>
