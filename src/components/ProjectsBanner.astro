@@ -16,13 +16,14 @@ const data: ProjectsData = await getData("projects");
 
   <section class="project-cards-wrapper">
     {
-      data.projects.map(({ attributes, bannerImage, description, title }) => (
+      data.projects.map(({ attributes, bannerImage, description, title, projectUrl }) => (
         <ProjectCard
           attributes={attributes}
           imgAlt={bannerImage.alt}
           imgUrl={bannerImage.src}
           projectDescription={description}
           projectName={title}
+          projectUrl={projectUrl}
         />
       ))
     }
@@ -66,6 +67,7 @@ const data: ProjectsData = await getData("projects");
   .projects-button {
     width: 186px;
     align-self: center;
+    padding: 8px;
   }
 
   @media (width >= 767px) {

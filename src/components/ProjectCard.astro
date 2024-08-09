@@ -8,14 +8,21 @@ export interface Props {
   imgUrl: string;
   imgAlt: string;
   attributes: string[];
+  projectUrl: string;
 }
 
-const { projectName, projectDescription, imgUrl, imgAlt, attributes } =
-  Astro.props;
+const {
+  projectName,
+  projectDescription,
+  imgUrl,
+  imgAlt,
+  attributes,
+  projectUrl,
+} = Astro.props;
 ---
 
 <Card class="card">
-  <div class="project-card">
+  <a href={projectUrl} class="project-card">
     <h4>{projectName}</h4>
     <div class="project-attributes">
       {
@@ -33,7 +40,7 @@ const { projectName, projectDescription, imgUrl, imgAlt, attributes } =
     </p>
 
     <Image src={imgUrl} alt={imgAlt} class="logo" inferSize />
-  </div>
+  </a>
 </Card>
 
 <style>
@@ -41,6 +48,10 @@ const { projectName, projectDescription, imgUrl, imgAlt, attributes } =
     background: var(--paper);
     min-width: 300px;
     width: 300px;
+  }
+
+  .card > a {
+    text-decoration: none;
   }
 
   .project-attributes {
@@ -69,6 +80,10 @@ const { projectName, projectDescription, imgUrl, imgAlt, attributes } =
     object-fit: contain;
     object-position: center;
     border-radius: 8px;
+  }
+
+  .body1 {
+    min-height: 120px;
   }
 
   @media (width >= 767px) {

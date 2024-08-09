@@ -1,15 +1,15 @@
 {
-  "title": "Completed projects",
-  "subtitle": "Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod.",
+  "title": "Proyectos que Hablan por Sí Mismos",
+  "subtitle": "En Orbita Solutions, cada proyecto es una oportunidad para superar expectativas. Estos son algunos de nuestros trabajos más destacados, donde la innovación, la calidad y la eficiencia se unen para crear soluciones que transforman negocios.",
   "button": {
-    "label": "Ver proyectos",
+    "label": "Ver Más Proyectos",
     "url": "/projects"
   },
   "projects": [
     {
-      "title": "Project 1",
-      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
-      "attributes": ["Industry", "Time", "Type"],
+      "title": "ZER: Gestión de Estacionamiento Inteligente",
+      "description": "Sistema completo para la administración de zonas de estacionamiento regulado en Sabaneta. Una solución eficiente para SKG que optimiza el uso del espacio urbano y facilita la gestión del parqueo.",
+      "attributes": ["Automatización", "Optimización", "Eficiencia"],
       "bannerImage": {
         "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
         "alt": "Project 1 alt"
@@ -17,9 +17,9 @@
       "projectUrl": "/projects/project1"
     },
     {
-      "title": "Project 2",
-      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
-      "attributes": ["Industry", "Time", "Type"],
+      "title": "Comparendera Digital: Control de Tránsito en Tiempo Real",
+      "description": "Sistema de comparendos de tránsito en Bogotá, integrado con las plataformas gubernamentales para una gestión rápida y precisa. Una herramienta esencial para SKG que moderniza la administración del tráfico.",
+      "attributes": ["Estatales", "Tiempo Real", "Tráfico"],
       "bannerImage": {
         "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
         "alt": "Project 2 alt"
@@ -27,9 +27,9 @@
       "projectUrl": "/projects/project2"
     },
     {
-      "title": "Project 3",
-      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
-      "attributes": ["Industry", "Time", "Type"],
+      "title": "Sitio Web CIC: Innovación en Salud Digital",
+      "description": "Desarrollo de un sitio web avanzado para el laboratorio CIC, con funcionalidades para la consulta de pruebas de laboratorio y optimización SEO. Una plataforma diseñada para destacar en el sector de la salud.",
+      "attributes": ["Salud", "SEO", "Web Avanzada"],
       "bannerImage": {
         "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
         "alt": "Project 3 alt"
@@ -37,9 +37,9 @@
       "projectUrl": "/projects/project3"
     },
     {
-      "title": "Project 4",
-      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
-      "attributes": ["Industry", "Time", "Type"],
+      "title": "Sitio Web Iris : Exportación con Estilo y Eficiencia",
+      "description": "Sitio web para la exportación de bálsamos labiales a Alemania, con enfoque en SEO y traducciones al alemán. Un proyecto que combina estética y funcionalidad para Iris.",
+      "attributes": ["Posicionamiento Internacional", "SEO Multilingüe"],
       "bannerImage": {
         "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
         "alt": "Project 4 alt"
@@ -47,9 +47,9 @@
       "projectUrl": "/projects/project4"
     },
     {
-      "title": "Project 5",
-      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
-      "attributes": ["Industry", "Time", "Type"],
+      "title": "Proyecto Comisiones: Simplificación de Procesos",
+      "description": "Sistema para la gestión de comisiones en Ferremaster, optimizando los procesos de pago y administración. Una solución que mejora la eficiencia operativa y facilita la toma de decisiones",
+      "attributes": ["Productividad", "Automatización", "Comisiones"],
       "bannerImage": {
         "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
         "alt": "Project 5 alt"
