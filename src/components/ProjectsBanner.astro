@@ -1,56 +1,35 @@
 ---
+import type { ProjectsData } from "@core/types/projects";
 import ProjectCard from "./ProjectCard.astro";
 import Button from "./shared/Button.astro";
+import { getData } from "@core/api";
+
+const data: ProjectsData = await getData("projects");
 ---
 
 <section class="bring-up projects">
   <div class="title-wrapper">
-    <h3>Completed projects</h3>
+    <h3>{data.title}</h3>
     <p>
-      Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec
-      euismod.
+      {data.subtitle}
     </p>
   </div>
 
   <section class="project-cards-wrapper">
-    <ProjectCard
-      attributes={["Industry", "Time", "Type"]}
-      imgAlt="Alt image"
-      imgUrl="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg"
-      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
-      projectName="Project 1"
-    />
-    <ProjectCard
-      attributes={["Industry", "Time", "Type"]}
-      imgAlt="Alt image"
-      imgUrl="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg"
-      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
-      projectName="Project 2"
-    />
-    <ProjectCard
-      attributes={["Industry", "Time", "Type"]}
-      imgAlt="Alt image"
-      imgUrl="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg"
-      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
-      projectName="Project 3"
-    />
-    <ProjectCard
-      attributes={["Industry", "Time", "Type"]}
-      imgAlt="Alt image"
-      imgUrl="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg"
-      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
-      projectName="Project 4"
-    />
-    <ProjectCard
-      attributes={["Industry", "Time", "Type"]}
-      imgAlt="Alt image"
-      imgUrl="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg"
-      projectDescription="Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget."
-      projectName="Project 5"
-    />
+    {
+      data.projects.map(({ attributes, bannerImage, description, title }) => (
+        <ProjectCard
+          attributes={attributes}
+          imgAlt={bannerImage.alt}
+          imgUrl={bannerImage.src}
+          projectDescription={description}
+          projectName={title}
+        />
+      ))
+    }
   </section>
 
-  <Button class="projects-button"> View all projects </Button>
+  <a href={data.button.url} class="btn primary projects-button"> {data.button.label}</a>
 </section>
 
 <style>

@@ -1,0 +1,60 @@
+{
+  "title": "Completed projects",
+  "subtitle": "Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod.",
+  "button": {
+    "label": "Ver proyectos",
+    "url": "/projects"
+  },
+  "projects": [
+    {
+      "title": "Project 1",
+      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
+      "attributes": ["Industry", "Time", "Type"],
+      "bannerImage": {
+        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "alt": "Project 1 alt"
+      },
+      "projectUrl": "/projects/project1"
+    },
+    {
+      "title": "Project 2",
+      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
+      "attributes": ["Industry", "Time", "Type"],
+      "bannerImage": {
+        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "alt": "Project 2 alt"
+      },
+      "projectUrl": "/projects/project2"
+    },
+    {
+      "title": "Project 3",
+      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
+      "attributes": ["Industry", "Time", "Type"],
+      "bannerImage": {
+        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "alt": "Project 3 alt"
+      },
+      "projectUrl": "/projects/project3"
+    },
+    {
+      "title": "Project 4",
+      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
+      "attributes": ["Industry", "Time", "Type"],
+      "bannerImage": {
+        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "alt": "Project 4 alt"
+      },
+      "projectUrl": "/projects/project4"
+    },
+    {
+      "title": "Project 5",
+      "description": "Lorem ipsum dolor sit amet consectetur. Tristique commodo cras tortor viverra quam in. Mattis sit pellentesque enim felis eget.",
+      "attributes": ["Industry", "Time", "Type"],
+      "bannerImage": {
+        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "alt": "Project 5 alt"
+      },
+      "projectUrl": "/projects/project5"
+    }
+  ]
+}
