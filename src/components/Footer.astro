@@ -1,27 +1,43 @@
 ---
 import { Image } from "astro:assets";
 
+import { getData } from "@core/api";
+
 import Logo from "@svgs/Logo.svg";
+
+import type { Footer } from "@core/types/footer";
+
+const data: Footer = await getData("footer");
 ---
 
-<footer>
+<footer class="bring-up">
   <section class="links">
     <div class="all-links">
       <div class="links-section">
-        <a href="">Services</a>
-        <a href="">Projects</a>
-        <a href="">Work with Us</a>
+        <a href={data.links.services.url}>{data.links.services.label}</a>
+        <a href={data.links.projects.url}>{data.links.projects.label}</a>
+        <a href=`mailto:${data.links.work.url}`>{data.links.work.label}</a>
       </div>
 
       <div class="links-section">
-        <a href="">Instagram</a>
-        <a href="">LinkedIn</a>
+        <a
+          href={data.links.instagram.url}
+          target="_blank"
+          referrerpolicy="no-referrer"
+          >{data.links.instagram.label}
+        </a>
+        <a
+          href={data.links.linkedin.url}
+          target="_blank"
+          referrerpolicy="no-referrer"
+          >{data.links.linkedin.label}
+        </a>
       </div>
     </div>
 
     <div>
-      <p class="chat">Let's chat</p>
-      <a href="email:contact@gmail.com">contact@gmail.com</a>
+      <p class="chat">{data.talkWithUs}</p>
+      <a href=`mailto:${data.email}`>{data.email}</a>
     </div>
   </section>
 

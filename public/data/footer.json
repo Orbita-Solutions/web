@@ -1,0 +1,26 @@
+{
+  "links": {
+    "services": {
+      "label": "Servicios",
+      "url": "/services"
+    },
+    "projects": {
+      "label": "Proyectos",
+      "url": "/projects"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "url": "http://instagram.com"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "http://linkedIn.com"
+    },
+    "work": {
+      "label": "Trabaja con nosotros",
+      "url": "orbitasolutionssas@gmail.com"
+    }
+  },
+  "talkWithUs": "Habla con nosotros!",
+  "email": "orbitasolutionssas@gmail.com"
+}
