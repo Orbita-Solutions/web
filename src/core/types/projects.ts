@@ -5,7 +5,7 @@ type Project = {
   description: string;
   attributes: string[];
   bannerImage: Image;
-  projectUrl: string;
+  projectUrl?: string;
 };
 
 export type ProjectsData = {
@@ -16,4 +16,5 @@ export type ProjectsData = {
     url: string;
   };
   projects: Project[];
+  aditionalProjects: Project[];
 };

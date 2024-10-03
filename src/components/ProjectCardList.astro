@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import { getIconSource } from "@core/utils/getIconByName";
+
+export interface Props {
+  projectName: string;
+  projectDescription: string;
+  imgUrl: string;
+  imgAlt: string;
+  attributes: string[];
+  projectUrl?: string;
+}
+
+const {
+  projectName,
+  projectDescription,
+  imgUrl,
+  imgAlt,
+  attributes,
+  projectUrl,
+} = Astro.props;
+---
+
+<a href={projectUrl} class="project-card">
+  <article class="project-card">
+    <h2>{projectName}</h2>
+
+    <div class="project-attributes">
+      {attributes.map((attribute) => <p>{attribute}</p>)}
+    </div>
+
+    <p>
+      {projectDescription}
+    </p>
+
+    <Image src={getIconSource(imgUrl)} alt={imgAlt} class="project-image" />
+  </article>
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  .project-card {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .project-attributes {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+    min-height: 50px;
+
+    p {
+      background: var(--energy-pink);
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+  }
+
+  @media (width >= 767px) {
+  }
+</style>

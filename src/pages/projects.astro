@@ -1,7 +1,87 @@
 ---
+import { getData } from "@core/api";
+import GetHelpBanner from "@components/GetHelpBanner.astro";
 import Layout from "@layouts/Layout.astro";
+import ProjectCardList from "@components/ProjectCardList.astro";
+import type { ProjectsData } from "@core/types/projects";
+
+const data: ProjectsData = await getData("projects");
+const allProjects = [...data.projects, ...data.aditionalProjects];
 ---
 
 <Layout title="Proyectos en Órbita.">
-  <p>Pagina en construccion</p>
+  <section class="title-container bring-up">
+    <h1>Nuestros proyectos</h1>
+    <p>
+      En Orbita Solutions, cada proyecto es una oportunidad para superar
+      expectativas. Estos son algunos de nuestros trabajos más destacados, donde
+      la innovación, la calidad y la eficiencia se unen para crear soluciones
+      que transforman negocios.
+    </p>
+  </section>
+
+  <section class="bring-up">
+    {
+      allProjects.map(
+        ({ attributes, bannerImage, description, title, projectUrl }) => (
+          <div class="project-separator">
+            <ProjectCardList
+              attributes={attributes}
+              imgAlt={bannerImage.alt}
+              imgUrl={bannerImage.src}
+              projectDescription={description}
+              projectName={title}
+              projectUrl={projectUrl}
+            />
+          </div>
+        )
+      )
+    }
+  </section>
+
+  <!-- Get Help -->
+  <GetHelpBanner />
 </Layout>
+
+<style>
+  .title-container {
+    margin: 150px 0;
+    padding: 0 16px;
+
+    h1 {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    p {
+      margin: 24px 0;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .project-separator {
+    padding: 24px 16px;
+    border-top: 1px solid var(--divider);
+  }
+
+  @media (width >= 767px) {
+    .title-container {
+      max-width: 1280px;
+      padding: 0 32px;
+    }
+    .project-separator {
+      padding: 24px 32px 24px 192px;
+    }
+  }
+
+  @media (width >= 1280px) {
+    .title-container {
+      padding: 0 64px;
+    }
+
+    .project-separator {
+      padding: 24px 64px 24px 340px;
+    }
+  }
+</style>

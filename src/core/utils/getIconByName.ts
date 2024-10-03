@@ -1,5 +1,5 @@
 import cic from "@svgs/cic.svg";
-import CICProject from "@svgs/dev.webp";
+import CICProject from "@svgs/lab.webp";
 import ComisionProject from "@svgs/ferreteria.webp";
 import ComparenderaProject from "@svgs/traffic.webp";
 import Ferremaster from "@svgs/ferremaster.png";
@@ -11,6 +11,7 @@ import MetricIcon2 from "@svgs/MetricIcon2.svg";
 import MetricIcon3 from "@svgs/MetricIcon3.svg";
 import MetricIcon4 from "@svgs/MetricIcon4.svg";
 import Naturnia from "@svgs/naturnia.webp";
+import NaturniaProject from "@svgs/naturniaproject.webp";
 import SKG from "@svgs/logo-SKG.png";
 import ZerProject from "@svgs/parking.webp";
 
@@ -28,6 +29,7 @@ const iconMap: { [key: string]: any } = {
   MetricIcon3,
   MetricIcon4,
   naturnia: Naturnia,
+  NaturniaProject,
   skg: SKG,
   ZerProject,
 };

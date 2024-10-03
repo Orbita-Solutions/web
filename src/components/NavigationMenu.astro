@@ -11,18 +11,23 @@ const data: Menu = await getData("menu");
 
 <nav class="nav-wrapper bring-up">
   <div class="desktop-menu">
-    <Image
-      src={MenuLogo}
-      alt={data.logoImage.alt}
-      class="logo-wrapper-desktop"
-    />
+    <a href="/">
+      <Image
+        src={MenuLogo}
+        alt={data.logoImage.alt}
+        class="logo-wrapper-desktop"
+      />
+    </a>
+
     <a href={data.items.work.url}>{data.items.work.label}</a>
     <a href={data.items.contact.url} class="btn energy contact-btn">
       {data.items.contact.label}
     </a>
   </div>
 
-  <Image src={MenuLogo} alt={data.logoImage.alt} class="logo-wrapper" />
+  <a href="/">
+    <Image src={MenuLogo} alt={data.logoImage.alt} class="logo-wrapper" />
+  </a>
 
   <MobileMenu
     openLabel={data.mobileButtons.open}

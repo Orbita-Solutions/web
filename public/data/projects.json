@@ -12,9 +12,8 @@
       "attributes": ["Automatización", "Optimización", "Eficiencia"],
       "bannerImage": {
         "src": "ZerProject",
-        "alt": "Project 1 alt"
-      },
-      "projectUrl": "/projects/project1"
+        "alt": "Imagen de parqueaderos en las calles."
+      }
     },
     {
       "title": "Comparendera Digital: Control de Tránsito en Tiempo Real",
@@ -22,19 +21,8 @@
       "attributes": ["Estatales", "Tiempo Real", "Tráfico"],
       "bannerImage": {
         "src": "ComparenderaProject",
-        "alt": "Project 2 alt"
-      },
-      "projectUrl": "/projects/project2"
-    },
-    {
-      "title": "Sitio Web CIC: Innovación en Salud Digital",
-      "description": "Desarrollo de un sitio web avanzado para el laboratorio CIC, con funcionalidades para la consulta de pruebas de laboratorio y optimización SEO. Una plataforma diseñada para destacar en el sector de la salud.",
-      "attributes": ["Salud", "SEO", "Web Avanzada"],
-      "bannerImage": {
-        "src": "CICProject",
-        "alt": "Project 3 alt"
-      },
-      "projectUrl": "/projects/project3"
+        "alt": "Imagen de trafico vehicular."
+      }
     },
     {
       "title": "Sitio Web Iris : Exportación con Estilo y Eficiencia",
@@ -42,19 +30,40 @@
       "attributes": ["Internacional", "SEO Multilingüe"],
       "bannerImage": {
         "src": "IrisProject",
-        "alt": "Project 4 alt"
+        "alt": "Imagen de sitio web de iris con labiales en un PC."
       },
-      "projectUrl": "/projects/project4"
+      "projectUrl": "https://www.iriscol.com/"
     },
+    {
+      "title": "Sitio Web CIC: Innovación en Salud Digital",
+      "description": "Desarrollo de un sitio web avanzado para el laboratorio CIC, con funcionalidades para la consulta de pruebas de laboratorio y optimización SEO. Una plataforma diseñada para destacar en el sector de la salud.",
+      "attributes": ["Salud", "SEO", "Web Avanzada"],
+      "bannerImage": {
+        "src": "CICProject",
+        "alt": "Imagen de sitio web creato para laboratorios."
+      },
+      "projectUrl": "https://www.ciclaboratorios.com/"
+    }
+  ],
+  "aditionalProjects": [
     {
       "title": "Proyecto Comisiones: Simplificación de Procesos",
       "description": "Sistema para la gestión de comisiones en Ferremaster, optimizando los procesos de pago y administración. Una solución que mejora la eficiencia operativa y facilita la toma de decisiones",
       "attributes": ["Productividad", "Automatización", "Comisiones"],
       "bannerImage": {
         "src": "ComisionProject",
-        "alt": "Project 5 alt"
+        "alt": "Imagen de computador con herramientas."
+      }
+    },
+    {
+      "title": "Sitio Web Naturnia",
+      "description": "Sitio web para la venta y comercializacion de salsas de frutas, infusiones, y bálsamos labiales. Con enfoque en SEO Marketing digital. Un proyecto que combina la naturaleza y la tecnologia.",
+      "attributes": ["SEO", "Marketing Digital"],
+      "bannerImage": {
+        "src": "NaturniaProject",
+        "alt": "Imagen de Naturnia sitio web."
       },
-      "projectUrl": "/projects/project5"
+      "projectUrl": "https://www.naturnia.com.co/"
     }
   ]
 }
