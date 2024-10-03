@@ -54,6 +54,7 @@ export const MobileMenu: React.FC<Props> = ({
 
             <div className={styles.menuItems}>
               <a href={items.work.url}>{items.work.label}</a>
+              <a href={items.services.url}>{items.services.label}</a>
             </div>
 
             <button

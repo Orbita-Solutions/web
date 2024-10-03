@@ -9,6 +9,7 @@ export type Menu = {
   logoImage: Image;
   items: {
     work: MenuItem;
+    services: MenuItem;
     contact: MenuItem;
   };
   mobileButtons: {

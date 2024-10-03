@@ -19,13 +19,17 @@ const data: Menu = await getData("menu");
       />
     </a>
 
-    <a href={data.items.work.url}>{data.items.work.label}</a>
+    <div class="links-wrapper">
+      <a href={data.items.work.url}>{data.items.work.label}</a>
+      <a href={data.items.services.url}>{data.items.services.label}</a>
+    </div>
+
     <a href={data.items.contact.url} class="btn energy contact-btn">
       {data.items.contact.label}
     </a>
   </div>
 
-  <a href="/">
+  <a class="mobile-logo" href="/">
     <Image src={MenuLogo} alt={data.logoImage.alt} class="logo-wrapper" />
   </a>
 
@@ -65,6 +69,11 @@ const data: Menu = await getData("menu");
     display: none;
   }
 
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+  }
+
   @media (width >= 1280px) {
     .logo-wrapper {
       display: none;
@@ -79,11 +88,18 @@ const data: Menu = await getData("menu");
       align-items: center;
     }
 
-    .desktop-menu > a {
+    .links-wrapper {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+    }
+
+    .desktop-menu a {
       font-size: 13px;
       line-height: 22px;
       text-decoration: none;
       color: var(--energy-blue);
+      margin: 0 16px;
     }
 
     .logo-wrapper-desktop {

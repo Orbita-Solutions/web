@@ -8,6 +8,10 @@
       "label": "Proyectos en Órbita",
       "url": "/projects"
     },
+    "services": {
+        "label": "Servicios",
+        "url": "/services"
+      },
     "contact": {
       "label": "Conecta",
       "url": "#getHelp"
