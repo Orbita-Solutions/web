@@ -16,6 +16,13 @@
     "phone": "+57 313 797 2127",
     "email": "orbitasolutionssas@gmail.com"
   },
+  "commercial": {
+    "role": "Asesor",
+    "name": "",
+    "phoneApi": "https://api.whatsapp.com/send?phone=573122673240&amp;text=Hola",
+    "phone": "+57 312 267 3240",
+    "email": "orbitasolutionssas@gmail.com"
+  },
   "form": {
     "company": "¿En qué empresa trabajas?",
     "country": "¿Desde qué país nos contactas?",

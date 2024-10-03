@@ -12,19 +12,28 @@ const data: Help = await getData("help");
   <h2>{data.title}</h2>
 
   <ContactInfo
+    position={data.commercial.role}
+    email={data.commercial.email}
+    name={data.commercial.name}
+    phoneUrl={data.commercial.phoneApi}
+    phone={data.commercial.phone}
+  />
+
+  <!-- <ContactInfo
     position={data.founder.role}
     email={data.founder.email}
     name={data.founder.name}
     phoneUrl={data.founder.phoneApi}
     phone={data.founder.phone}
-  />
-  <ContactInfo
+  /> -->
+
+  <!-- <ContactInfo
     position={data.admin.role}
     email={data.admin.email}
     name={data.admin.name}
     phoneUrl={data.admin.phoneApi}
     phone={data.admin.phone}
-  />
+  /> -->
 
   <Modal
     class="contact-button"

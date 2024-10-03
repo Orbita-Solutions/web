@@ -11,7 +11,7 @@
       "description": "Sistema completo para la administración de zonas de estacionamiento regulado en Sabaneta. Una solución eficiente para SKG que optimiza el uso del espacio urbano y facilita la gestión del parqueo.",
       "attributes": ["Automatización", "Optimización", "Eficiencia"],
       "bannerImage": {
-        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "src": "ZerProject",
         "alt": "Project 1 alt"
       },
       "projectUrl": "/projects/project1"
@@ -21,7 +21,7 @@
       "description": "Sistema de comparendos de tránsito en Bogotá, integrado con las plataformas gubernamentales para una gestión rápida y precisa. Una herramienta esencial para SKG que moderniza la administración del tráfico.",
       "attributes": ["Estatales", "Tiempo Real", "Tráfico"],
       "bannerImage": {
-        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "src": "ComparenderaProject",
         "alt": "Project 2 alt"
       },
       "projectUrl": "/projects/project2"
@@ -31,7 +31,7 @@
       "description": "Desarrollo de un sitio web avanzado para el laboratorio CIC, con funcionalidades para la consulta de pruebas de laboratorio y optimización SEO. Una plataforma diseñada para destacar en el sector de la salud.",
       "attributes": ["Salud", "SEO", "Web Avanzada"],
       "bannerImage": {
-        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "src": "CICProject",
         "alt": "Project 3 alt"
       },
       "projectUrl": "/projects/project3"
@@ -41,7 +41,7 @@
       "description": "Sitio web para la exportación de bálsamos labiales a Alemania, con enfoque en SEO y traducciones al alemán. Un proyecto que combina estética y funcionalidad para Iris.",
       "attributes": ["Internacional", "SEO Multilingüe"],
       "bannerImage": {
-        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "src": "IrisProject",
         "alt": "Project 4 alt"
       },
       "projectUrl": "/projects/project4"
@@ -51,7 +51,7 @@
       "description": "Sistema para la gestión de comisiones en Ferremaster, optimizando los procesos de pago y administración. Una solución que mejora la eficiencia operativa y facilita la toma de decisiones",
       "attributes": ["Productividad", "Automatización", "Comisiones"],
       "bannerImage": {
-        "src": "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg",
+        "src": "ComisionProject",
         "alt": "Project 5 alt"
       },
       "projectUrl": "/projects/project5"

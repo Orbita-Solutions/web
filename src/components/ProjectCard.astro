@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Card from "./shared/Card.astro";
+import { getIconSource } from "@core/utils/getIconByName";
 
 export interface Props {
   projectName: string;
@@ -39,7 +40,7 @@ const {
       {projectDescription}
     </p>
 
-    <Image src={imgUrl} alt={imgAlt} class="logo" inferSize />
+    <Image src={getIconSource(imgUrl)} alt={imgAlt} class="logo" />
   </a>
 </Card>
 

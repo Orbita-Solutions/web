@@ -12,6 +12,7 @@ export type Help = {
   buttonLabel: string;
   founder: Contact;
   admin: Contact;
+  commercial: Contact;
   form: {
     company: string;
     country: string;
