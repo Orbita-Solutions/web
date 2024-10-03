@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import { getIconSource } from "@core/utils/getIconByName";
+
+export interface Props {
+  name: string;
+  description: string;
+  imgUrl: string;
+  imgAlt: string;
+}
+
+const { name, description, imgUrl, imgAlt } = Astro.props;
+---
+
+<div class="service-card">
+  <article class="service-card">
+    <h2>{name}</h2>
+    <p>
+      {description}
+    </p>
+    <Image src={getIconSource(imgUrl)} alt={imgAlt} class="service-image" />
+  </article>
+</div>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  .service-card {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+  }
+</style>

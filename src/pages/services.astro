@@ -1,7 +1,81 @@
 ---
+import { getData } from "@core/api";
+import GetHelpBanner from "@components/GetHelpBanner.astro";
 import Layout from "@layouts/Layout.astro";
+
+import type { ServicesData } from "@core/types/services";
+import ServicesList from "@components/ServicesList.astro";
+
+const data: ServicesData = await getData("services");
 ---
 
 <Layout title="Servicios de Órbita.">
-  <p>Pagina en construccion</p>
+  <section class="title-container bring-up">
+    <h1>{data.title}</h1>
+    <p>
+      {data.description}
+    </p>
+  </section>
+
+  <section class="bring-up">
+    {
+      data.services.map(({ name, longDescription, image }) => (
+        <div class="service-separator">
+          <ServicesList
+            description={longDescription!}
+            imgAlt={image.alt}
+            imgUrl={image.src}
+            name={name}
+          />
+        </div>
+      ))
+    }
+  </section>
+
+  <!-- Get Help -->
+  <GetHelpBanner />
 </Layout>
+
+<style>
+  .title-container {
+    margin: 150px 0;
+    padding: 0 16px;
+
+    h1 {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    p {
+      margin: 24px 0;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .service-separator {
+    padding: 24px 16px;
+    border-top: 1px solid var(--divider);
+  }
+
+  @media (width >= 767px) {
+    .title-container {
+      max-width: 1280px;
+      padding: 0 32px;
+    }
+
+    .service-separator {
+      padding: 24px 32px 24px 192px;
+    }
+  }
+
+  @media (width >= 1280px) {
+    .title-container {
+      padding: 0 64px;
+    }
+
+    .service-separator {
+      padding: 24px 64px 24px 340px;
+    }
+  }
+</style>

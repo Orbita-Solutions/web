@@ -8,25 +8,45 @@
       "name": "Webs que Inspiran",
       "description": "Crea una presencia en línea atractiva y funcional que cautive a tus usuarios.",
       "originalName": "Desarrollo de Sitios Web Dinámicos y Estáticos",
-      "iconName": "MetricIcon2"
+      "iconName": "MetricIcon2",
+      "longDescription": "En Orbita Solutions, diseñamos y desarrollamos sitios web dinámicos y estáticos que no solo cumplen con los estándares modernos de diseño, sino que también ofrecen una experiencia de usuario impecable. Te acompañamos desde la concepción de la idea hasta la implementación final, asegurándonos de que tu sitio web refleje fielmente la identidad de tu marca y logre cautivar a tu público. Nos encargamos de que tu presencia en línea sea atractiva, funcional y completamente optimizada para dispositivos móviles, brindándote un espacio digital que realmente inspire.",
+      "image": {
+        "src": "WebService",
+        "alt": "Imagen de aplicacion web"
+      }
     },
     {
       "name": "Soluciones Personalizadas",
       "description": "Transformamos tus necesidades únicas en aplicaciones eficientes y escalables.",
       "originalName": "Desarrollo de Aplicativos y Soluciones a la Medida",
-      "iconName": "MetricIcon3"
+      "iconName": "MetricIcon3",
+      "longDescription": "Cada negocio tiene sus propios desafíos y nosotros estamos aquí para crear soluciones a medida que se ajusten a tus necesidades específicas. Desarrollamos aplicaciones personalizadas y escalables que facilitan el crecimiento de tu empresa y optimizan tus operaciones diarias. Durante todo el proceso, trabajamos de la mano contigo, entendiendo tus requisitos y adaptándonos para ofrecerte una solución que no solo funcione hoy, sino que también esté preparada para el futuro. Nuestro enfoque es siempre flexible, permitiéndote agregar funcionalidades a medida que evolucionen tus necesidades.",
+      "image": {
+        "src": "SolService",
+        "alt": "imagen de soluciones personalizadas"
+      }
     },
     {
       "name": "Apps que Conectan",
       "description": "Desarrollamos aplicaciones móviles intuitivas que acercan tu marca a tus clientes.",
       "originalName": "Desarrollo de Aplicativos Móviles",
-      "iconName": "MetricIcon4"
+      "iconName": "MetricIcon4",
+      "longDescription": "Hoy en día, las aplicaciones móviles son el puente entre tu marca y tus clientes. Desarrollamos apps intuitivas y de alto rendimiento que logran una experiencia fluida y cercana en cualquier dispositivo móvil. Desde el diseño hasta la publicación en las tiendas de aplicaciones, te acompañamos en cada etapa del desarrollo, asegurándonos de que tu app no solo cumpla con tus expectativas, sino que las supere. Nuestro equipo se centra en la usabilidad, la accesibilidad y la funcionalidad, garantizando que cada interacción sea significativa y aporte valor tanto a tu empresa como a tus usuarios.",
+      "image": {
+        "src": "AppService",
+        "alt": "Imagen de aplicaciones personalizadas"
+      }
     },
     {
       "name": "Software Potente para Escritorio",
       "description": "Aplicaciones robustas y de alto rendimiento para Mac y Windows.",
       "originalName": "Desarrollo de Aplicativos para Escritorio (Mac y Windows)",
-      "iconName": "MetricIcon1"
+      "iconName": "MetricIcon1",
+      "longDescription": "Desarrollamos aplicaciones de escritorio robustas y eficientes, adaptadas a las necesidades de tu negocio, ya sea en entornos Mac o Windows. Nos especializamos en crear soluciones que optimizan tus procesos y mejoran la productividad de tu equipo. Desde herramientas específicas para gestionar datos hasta aplicaciones de alto rendimiento, nuestro software para escritorio está diseñado para integrarse sin problemas en tu flujo de trabajo. Te acompañamos desde el diseño inicial hasta el soporte post-lanzamiento, asegurándonos de que siempre tengas una solución que funcione sin contratiempos y se adapte a tus futuras necesidades.",
+      "image": {
+        "src": "DesktopService",
+        "alt": "Imagen de desarrollo de apps para escritorio"
+      }
     }
   ]
 }

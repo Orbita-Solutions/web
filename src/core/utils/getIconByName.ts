@@ -1,7 +1,9 @@
+import AppService from "@svgs/appservice.webp";
 import cic from "@svgs/cic.svg";
 import CICProject from "@svgs/lab.webp";
 import ComisionProject from "@svgs/ferreteria.webp";
 import ComparenderaProject from "@svgs/traffic.webp";
+import DesktopService from "@svgs/desktopservice.webp";
 import Ferremaster from "@svgs/ferremaster.png";
 import Fraktal from "@svgs/Fraktal.svg";
 import Iris from "@svgs/Iris.svg";
@@ -13,6 +15,8 @@ import MetricIcon4 from "@svgs/MetricIcon4.svg";
 import Naturnia from "@svgs/naturnia.webp";
 import NaturniaProject from "@svgs/naturniaproject.webp";
 import SKG from "@svgs/logo-SKG.png";
+import SolService from "@svgs/solservices.webp";
+import WebService from "@svgs/webservice.webp";
 import ZerProject from "@svgs/parking.webp";
 
 const iconMap: { [key: string]: any } = {
@@ -20,6 +24,7 @@ const iconMap: { [key: string]: any } = {
   CICProject,
   ComisionProject,
   ComparenderaProject,
+  DesktopService,
   ferremaster: Ferremaster,
   fraktal: Fraktal,
   iris: Iris,
@@ -30,7 +35,9 @@ const iconMap: { [key: string]: any } = {
   MetricIcon4,
   naturnia: Naturnia,
   NaturniaProject,
-  skg: SKG,
+  skg: SKG,AppService,
+  SolService,
+  WebService,
   ZerProject,
 };
 
