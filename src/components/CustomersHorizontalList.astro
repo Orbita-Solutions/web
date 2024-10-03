@@ -8,54 +8,110 @@ import type { ClientsData } from "@core/types/clients";
 const data: ClientsData = await getData("clients");
 ---
 
-<section class:list={["customers", "bring-up"]}>
-  {
-    data.clients.map(({ name, logo, siteUrl }) => (
-      <a
-        class="icon"
-        href={siteUrl}
-        target="_blank"
-        referrerpolicy="no-referrer"
-      >
-        <Image
-          style={{
-            filter: "brightness(0) invert(1)",
-          }}
-          src={getIconSource(logo.src)}
-          alt={logo.alt}
-          width={logo.width}
-          height={logo.height}
-          title={name}
-        />
-      </a>
-    ))
-  }
+<section class="customer-wrapper">
+  <h2>Clientes que han apostado por la innovación</h2>
+  <section class:list={["customers", "bring-up"]}>
+    {
+      data.clients.map(({ name, logo, siteUrl }) => (
+        <a
+          class="client-logo"
+          href={siteUrl}
+          target="_blank"
+          referrerpolicy="no-referrer"
+        >
+          <Image
+            style={{
+              filter: "brightness(0) invert(1)",
+            }}
+            src={getIconSource(logo.src)}
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
+            title={name}
+          />
+        </a>
+      ))
+    }
+  </section>
 </section>
 
 <style>
+  .customer-wrapper {
+    padding: 0 16px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 1.5;
+      font-weight: 400;
+      padding: 0 0 16px 0;
+    }
+  }
+
   .customers {
-    z-index: 1;
     position: relative;
-    background: var(--paper);
-    padding: 0 24px;
-    display: flex;
-    flex-flow: row;
-    overflow-x: auto;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    scrollbar-width: none;
   }
 
-  .customers::-webkit-scrollbar {
-    width: 0px;
+  .client-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    min-height: 170px;
   }
 
-  .icon {
-    margin-left: auto;
-    min-width: 150px;
-    text-align: center;
+  .client-logo:nth-child(1) {
+    background: var(--paper);
   }
-  .icon:last-child {
-    margin-right: auto;
+  .client-logo:nth-child(2) {
+    background: var(--modal-background);
+  }
+
+  .client-logo:nth-child(3) {
+    background: var(--modal-background);
+  }
+  .client-logo:nth-child(4) {
+    background: var(--paper);
+  }
+  .client-logo:nth-child(5) {
+    background: var(--paper);
+  }
+  .client-logo:nth-child(6) {
+    background: var(--modal-background);
+  }
+
+  .client-logo > img {
+    width: 120px;
+    height: auto;
+  }
+
+  @media (width >= 768px) {
+    .customer-wrapper {
+      padding: 0 32px;
+    }
+
+    .customers {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .client-logo:nth-child(odd) {
+      background: var(--paper);
+    }
+
+    .client-logo:nth-child(even) {
+      background: var(--modal-background);
+    }
+  }
+
+  @media (width >= 1280px) {
+    .customer-wrapper {
+      padding: 0 64px;
+    }
+
+    .customers {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>
