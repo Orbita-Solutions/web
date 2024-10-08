@@ -13,7 +13,6 @@ const { serviceName } = Astro.props;
     <div class="service-icon">
       <slot />
     </div>
-    <!-- <Icon class="service-icon" name={iconName} /> -->
     <h5>{serviceName}</h5>
   </div>
 </Card>
@@ -28,5 +27,10 @@ const { serviceName } = Astro.props;
   .service-icon {
     width: 24px;
     height: 24px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 </style>

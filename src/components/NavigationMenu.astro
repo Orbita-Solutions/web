@@ -22,11 +22,12 @@ const data: Menu = await getData("menu");
     <div class="links-wrapper">
       <a href={data.items.work.url}>{data.items.work.label}</a>
       <a href={data.items.services.url}>{data.items.services.label}</a>
+
+      <a href={data.items.contact.url} class="btn energy contact-btn">
+        {data.items.contact.label}
+      </a>
     </div>
 
-    <a href={data.items.contact.url} class="btn energy contact-btn">
-      {data.items.contact.label}
-    </a>
   </div>
 
   <a class="mobile-logo" href="/">

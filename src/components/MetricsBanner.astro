@@ -34,43 +34,6 @@ const data: MetricsData = await getData("metrics");
       </MetricCard>
     ))
   }
-
-  <!-- <MetricCard
-    class="desktop-only"
-    title="45%"
-    description="Increase user retention"
-  >
-    <div class="metric-icon-wrapper">
-      <Image src={MetricIcon1} alt="MetricIcon1" class="metric-icon" />
-    </div>
-  </MetricCard>
-  <MetricCard
-    class="desktop-only"
-    title="15%"
-    description="Increase in product sales"
-  >
-    <div class="metric-icon-wrapper">
-      <Image src={MetricIcon2} alt="MetricIcon2" class="metric-icon" />
-    </div>
-  </MetricCard> -->
-
-  <!-- <MetricCard
-    title="999"
-    description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
-  >
-    <div class="metric-icon-wrapper">
-      <Image src={MetricIcon3} alt="MetricIcon3" class="metric-icon" />
-    </div>
-  </MetricCard>
-
-  <MetricCard
-    title="999"
-    description="Lorem ipsum dolor sit amet consectetur. Gravida dictum sociis felis donec euismod."
-  >
-    <div class="metric-icon-wrapper">
-      <Image src={MetricIcon4} alt="MetricIcon4" class="metric-icon" />
-    </div>
-  </MetricCard> -->
 </section>
 
 <style>
@@ -103,6 +66,12 @@ const data: MetricsData = await getData("metrics");
     display: none;
   }
 
+  @media (width >= 768px) {
+    .metrics-container {
+      padding: 56px 32px;
+    }
+  }
+
   @media (width >= 1280px) {
     .desktop-only {
       display: initial;
@@ -126,8 +95,5 @@ const data: MetricsData = await getData("metrics");
       width: 38px;
       height: 38px;
     }
-  }
-
-  @media (width >= 1920px) {
   }
 </style>
