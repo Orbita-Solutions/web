@@ -7,21 +7,21 @@
     "name": "Mateo",
     "phoneApi": "https://api.whatsapp.com/send?phone=573122673240&amp;text=Hola",
     "phone": "+57 312 267 3240",
-    "email": "orbitasolutionssas@gmail.com"
+    "email": "hola@orbitasolutions.co"
   },
   "admin": {
     "role": "Directora Ejecutiva",
     "name": "Luisa",
     "phoneApi": "https://api.whatsapp.com/send?phone=573137972127&amp;text=Hola",
     "phone": "+57 313 797 2127",
-    "email": "orbitasolutionssas@gmail.com"
+    "email": "hola@orbitasolutions.co"
   },
   "commercial": {
     "role": "Asesor",
     "name": "",
     "phoneApi": "https://api.whatsapp.com/send?phone=573122673240&amp;text=Hola",
     "phone": "+57 312 267 3240",
-    "email": "orbitasolutionssas@gmail.com"
+    "email": "hola@orbitasolutions.co"
   },
   "form": {
     "company": "¿En qué empresa trabajas?",
