@@ -10,12 +10,13 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   output: "hybrid",
+  site: 'https://orbitasolutions.co',
   integrations: [
     react(),
+    sitemap(),
     robotsTxt({
       sitemap: false,
     }),
-    sitemap(),
     partytown({
       config: {
         forward: ["dataLayer.push"],
