@@ -9,7 +9,10 @@ const data: ProjectsData = await getData("projects");
 const allProjects = [...data.projects, ...data.aditionalProjects];
 ---
 
-<Layout title="Proyectos en Órbita.">
+<Layout
+  title="Proyectos Destacados - Casos de Éxito en Desarrollo de Software | Orbita Solutions"
+  description="Explora los proyectos que hemos desarrollado para clientes en diversos sectores. Desde soluciones de gestión inteligente hasta plataformas de comercio digital, en Orbita Solutions demostramos cómo nuestra tecnología marca la diferencia."
+>
   <section class="title-container bring-up">
     <h1>{data.title}</h1>
     <p>

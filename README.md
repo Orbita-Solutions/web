@@ -14,3 +14,12 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## Add analytics
+
+<https://www.freecodecamp.org/news/how-to-add-google-analytics-to-your-astro-website/>
+
+## SEO
+
+<https://medium.com/@aisyndromeart/optimizing-astro-js-websites-for-seo-a-guide-for-developers-25fcd20c8e30>
+<https://astro.build/integrations?search=&categories%5B%5D=performance+seo&categories%5B%5D=accessibility>

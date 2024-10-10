@@ -9,7 +9,10 @@ import ServicesList from "@components/ServicesList.astro";
 const data: ServicesData = await getData("services");
 ---
 
-<Layout title="Servicios de Órbita.">
+<Layout
+  title="Nuestros Servicios - Desarrollo de Software, Web y Apps | Orbita Solutions"
+  description="Descubre nuestra amplia gama de servicios, desde el desarrollo de sitios web dinámicos hasta soluciones personalizadas de software y aplicaciones móviles. En Orbita Solutions, creamos tecnología a medida para resolver tus desafíos empresariales y transformar tus proyectos en realidad."
+>
   <section class="title-container bring-up">
     <h1>{data.title}</h1>
     <p>

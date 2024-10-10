@@ -2,12 +2,14 @@
 import AppBackground from "@components/AppBackground.astro";
 import Footer from "@components/Footer.astro";
 import NavigationMenu from "@components/NavigationMenu.astro";
+import { AstroSeo } from "@astrolib/seo";
 
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,7 +20,23 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-D2FJYGEEVK"></script>
+
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-D2FJYGEEVK");
+    </script>
+
+    <AstroSeo title={title} description={description} />
   </head>
   <body>
     <AppBackground>
